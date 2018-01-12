@@ -1,0 +1,646 @@
+﻿TLR
+
+ChangeLog for TLR
+-------------------------
+
+
+5/19/2010 - Nathan Gudmunson
+----------------------------
+Files/Stored Procedures Modified:
+
+	UpdateTimesheet.aspx.vb
+	TSPartTime.ascx
+	TSPartTime.ascx.vb
+
+1.	#1201:  Error when adding a supervisor to a TS that does not already have a supervisor 
+    Added in a .tostring to gracefully convert possible null values to a string value.
+2.  #1200   Issue with meal break 
+    The mealtime has now been changed to "pass by reference" from "pass by value" and it 
+    is updated in the error checking portion of the parttime timesheet control in the 
+    function IsValidEntry to be 0. This is then updated like normal. The error message 
+    is also suppressed. 
+3.  No Case number: Added a web config value to enable toggling of whether parttime 
+    employees get an automatic email sent.
+
+
+3/29/2010 - Shawn South
+----------------------------
+Files/Stored Procedures Modified:
+
+	FileExport.aspx.vb	(additional error handling)
+	usp_FileExport_TIME	(fixed reference to wrong Export__Data table)
+	
+
+3/19/2010
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+Updated Stored Procedure(s):
+		usp_SELECT_Timesheet_Overtime
+		usp_FileExport_LEAVE
+		usp_FileExport_TIME
+
+New Stored Procedure(s):
+		usp_SELECT_OvertimeTotals_ForSupervisorsEmployees
+
+1.	Files to be uploaded to the HP for automatic processing now correctly
+	calculate timesheets with overtime based on the weekly maximum (40)
+	instead of by total pay period hours.
+2.	Overtime report for Supervisors (showing only employees in the depts
+	they supervise) has been added.
+
+
+3/5/2010
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+	Updated SP: usp_SELECT_Timesheet_Overtime
+
+
+3/1/2010
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+    
+  File: js/autoLoader.js
+        js/autoNumeric-1.3.2.js
+        mpDefault.Master
+        Controls/TSPartTime.ascx
+    SP: usp_GET_EmployeeAnniversary
+  
+Bugs Fixed
+
+1. (#1180)  Sprint 3: Limit the the budget split to .00 not .000, which 
+            is causing an error. 
+            this has been fixed by implementing jquery into the app and using 
+            the autoNumeric plugin from http://decorplanit.com/plugin/
+            
+
+2/23/2010
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+    
+  File: TSFullTime.ascx.vb
+  
+Bugs Fixed
+
+1. (#1188)  Error when approving timesheets - Object reference not set to 
+            an instance of an object.
+            This was due to an extra variable being left in the app that 
+            was a result of removing the supervisor vacation pre-approval 
+            functionality. This has been fully removed from the app now.
+
+
+
+2/18/2010
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+    SP: usp_TimesheetAction_ROUTE
+
+	Created SP: usp_SELECT_Timesheet_Overtime
+    
+  File: clsTimesheet.vb
+        TSFullTime.ascx.vb
+  
+Bugs Fixed
+
+1. (#1135)  Sprint 3: timesheets are automatically processed by TLR if the supervisor 
+            submits the timesheet and it has the appropriate amount of hours .
+            This has been implemented by adding a parameter to the SP: blnIsDelegate
+
+
+2/17/2010
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+    SP: usp_INSERT_TimesheetAction
+  
+Bugs Fixed
+
+1. (#1116)  Sprint 3: Timesheet action log had multiple entries for create timesheet 
+            Modified the SP to check for action id 4 and only enter if the count
+            of entries in the timesheetaction table is 0.
+
+
+2/16/2010
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+ Files: TSFulltime.ascx.vb
+        TSFulltime.ascx
+        LeaveBalance.aspx
+        clsGeneric.vb
+        TLR.css
+    SP: usp_GET_EmployeeAnniversary
+
+  
+Bugs Fixed
+
+1. (#1172)  Sprint 3: Remove the “Not Approved” feature from the application. 
+            Removed the code that prints (NP) as well as setting the values
+            of the approver view to false for editing those leave values. 
+2. (#1092)  Sprint 3: The anniversary date is not showing for employees. 
+            Added the anniversary date to the Leave Balance section.
+
+
+
+1/29/2010
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+ Files: Global.asax.vb
+ 
+Bugs Fixed
+
+1. (#1185)  Change https redirect in TLR 
+            A fix has been implemented by adding a line in the code that does the 
+            http->https redirection. It essentially replaces the '/Default.aspx' 
+            with ''.
+
+
+
+1/26/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+ Files: SearchEmployees.aspx
+ Files: FileExport.aspx
+ 
+Bugs Fixed
+
+1.  (#1118) Add Note for ‘Search Employees’ indicating that only classified 
+            and exempt employees will be shown 
+            Added note back to SearchEmployees.aspx - "Click on an employee to see their 
+            Work Schedule, Current Leave Balances, and Timesheets. Note - only 
+            classified and exempt employees will be shown." 
+2.          Added in a condition so that the export file is not written for test 
+            builds, only dev and prod.  
+3.  (#1146) Feature for bug was implemented for full-time timesheets, not 
+            part-time. This is fixed.
+
+1/25/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+ Files: TSPartTime.ascx
+        TLR.css
+ 
+Bugs Fixed
+
+1.  (#1180)  Phase2: OLGA WANTS US TO FIX THIS FIRST -Limit the the budget 
+             split to .00 not .000, which is causing an error. 
+             
+    Added in a validator to the textbox that will not allow the user to submit a 
+    budget hour that contains .XXX, but will limit to .XX, using regex.
+
+
+
+
+
+1/21/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+ SP:  usp_SELECT_EmployeeList_FT (see TLR.DB\Change Scripts)
+
+Bugs Fixed
+
+1.  (#1174) Phase2:Part-Time Factulty Employee's with an hourly job is not included in the upload and 
+    super can't see TS in employee search.
+    Fixed 1/2 of this bug. Now when the supervisor goes into the "search employees" section, 
+    the app will show PT faculty who also have hourly jobs. This was done by joining a few 
+    tables to grab specifically PT - H faculty.
+
+
+
+1/19/2009 - Shawn South
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+	usp_NOTIFICATION_PayrollReminders (see TLR.DB\Change Scripts)
+
+Bugs Fixed
+
+1.  (#1175)  Phase2: CC: the supervisor when Payroll rejects their employees TS.
+	Code appears to already exist for this. Marked as Resolved so it can be tested.
+2.	(#1178)  Phase 2: Reminder email should go on the last day of the pay period.
+	Stored procedure has been updated to check the current date instead of 2 days
+	from today.
+
+
+1/15/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+Modified Files:
+  TSFullTime.ascx
+  TSFullTime.ascx.vb
+  Settings.settings
+  Web.config
+  mpDefault.Master
+  mpDefault.Master.vb
+
+Bugs Fixed
+
+1.  (#1146) Phase 2:Auto select the next day after adding time to a timesheet
+    Added functionality so that when you add hours to the timesheet, the next day 
+    is automatically selected.
+2.  (#1160) Phase 2: Add “Reports” link to TLR, with note regarding IE usage. 
+    Added a configuration property to web.config with links to the two report pages
+    inside SQL reporting services, as well as the links in payroll/supervisor sidebar.
+
+
+
+12/8-12/9/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+
+Modified Sp: [usp_SELECT_TimesheetStatus]
+Modified Files:
+  TSPartTime.ascx
+  TSPartTime.ascx.vb
+  TSPartTime.ascx.designer.vb
+  TSFullTime.ascx
+  TSFullTime.ascx.vb
+  TSFullTime.ascx.designer.vb
+  TLR.css
+  Home.aspx
+  Home.aspx.vb
+
+Bugs Fixed
+
+1.  (#1161) Removed "Awaiting Fin. Aid Approval" status from Timesheet Search.
+2.  (#1116)  Phase 2: Timesheet action log had multiple entries for create timesheet. This has been fixed
+    by making the create timesheet/submit timesheet buttons turn disabled when a user clicks them.
+    There should be no way to click a button twice now.
+
+
+
+12/7/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+
+Modified Files: 
+  Settings.settings
+  Web.config
+  clsNotify.vb
+  mpDefault.Master
+  mpDefault.Master.vb
+Created Files: 
+  WebAppSettingDev.config
+  WebAppSettingTest.config
+  WebAppSettingProd.config
+  WebConnStrDev.config
+  WebConnStrTest.config
+  WebConnStrProd.config
+
+
+
+Bugs Fixed
+
+1.  Created the dev/test/prod build profiles-moved around properties from 
+    settings.settings to the appSettings section of web.config
+2.  Added a visual representation of which build the user is 
+    using (none for prod of course)
+
+
+
+
+
+11/30/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+
+Modified File: Settings.settings
+Modified File: Home.aspx.vb
+USP: [usp_SEARCH_Timesheet]
+GlobalText.resx 
+
+
+Bugs Fixed
+
+1.  James Craswell is now a Payroll admin in Settings.settings
+2.  "Pay Period" dropdown at TLR Home now reflects the proper period instead
+    of being forward one pay period (only happened on last day of period)
+3.  Ordered timesheet search page by Date desc, name asc
+4.  Found a typo in GlobalText.resx, fixed it
+
+
+
+
+11/20/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+Modified SP: usp_FileExportLeave
+Modified SP: usp_FileExportTime
+
+
+Bugs Fixed
+
+1.  (#1084) timesheets are now correctly excluded from the export file.
+
+
+
+11/18/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+Modified SP: usp_TimesheetAction_ROUTE
+Modified SP: usp_SELECT_Timesheet_IsValid 
+
+
+Bugs Fixed
+
+1.  (#1135) Employees with exactly their work schedule reported on timesheet
+    are automatically set to 'processed by payroll' vs 'sent to payroll'
+
+
+
+-----------------------------------------
+Pushed files to Test - 11/17/209 - 2:15pm
+-----------------------------------------
+
+11/17/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+Modified SP: TLR.css
+
+
+Bugs Fixed
+
+1.  (#1138) Employee types on Timesheet search are now aligned correctly as discussed.
+
+
+11/13/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+Modified SP: TLR.css
+
+
+Bugs Fixed
+
+1.  (#1138) Employee types on Timesheet search are now aligned as discussed.
+2.  (#1091) Holidays outside of time period are no longer colored light blue,
+    but are instead the same color as inactive days.
+
+
+11/12/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+Modified SP: usp_UPSERT_TimesheetEntry_LEAVE
+
+
+Bugs Fixed
+
+1.  (#1131) Allowed users to add 8 hours of S time and 24 hours of K time on
+    an update. This has been fixed.
+
+
+
+
+11/11/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+Modified SP: usp_SELECT_TimesheetContainsMisc
+File: TSFullTime.aspx.vb
+
+
+Bugs Fixed
+
+1.  (#1088) Problem with remark fix. Now it lets you submit the timesheet after 
+    a remark has been added to the timesheet.
+
+
+11/10/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+Modified SP: usp_SELECT_TimesheetEmployeeType [TLR1]
+File: TLR.css
+File: SearchTimesheets.aspx.vb
+
+
+Bugs Fixed
+
+1.  (#1137) Removed Paraprofessional, part time fac, supp ret, 
+    volunteer from search timesheets list and changed name from 
+    'C' to 'Classified.' Also changed listing of li elements to
+    make it easier to read.
+    
+    
+11/9/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+Created SP:  usp_SELECT_TimesheetHolidayNames [TLR1]
+Modified SP: usp_FileExport_LEAVE [TLR1]
+Modified SP: usp_FileExport_TIME [TLR1]
+
+
+Bugs Fixed
+
+1.  Calculate overtime between full-time and part-time timesheets. When overtime 
+    exists, flag the timesheets for payroll. If over time exist do not include 
+    the timesheet in the export file 
+    
+    
+    
+    10/30/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+File: TSFullTime.ascx
+File: TSFullTime.ascx.vb
+File: TSFullTime.ascx.designer.vb
+File: TLR.css
+Created SP:  usp_SELECT_TimesheetHolidayNames [TLR1]
+
+
+
+Bugs Fixed
+
+1.  Added a holidays section below the timesheet calendar which lists any 
+    holidays in an li format if there are any in that time period. 
+2.  Added an <abbr> of "holiday" on the time calendar so screen readers can 
+    tell that particular day is a holiday, but it is hidden from normal users
+    view, as they can use the color to determine if it's a holiday or not.
+
+
+10/26/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+File: SearchTimesheets.aspx/SearchTimesheets.aspx.vb
+SP: usp_SEARCH_Timesheet
+
+Bugs Fixed
+
+1. added the column into search results which will show if the 
+  timesheet has been processed manually or automatically.
+
+
+
+10/23/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+Table: EntryType - changed "Holiday Positive Time" to "School Holiday"
+
+Bugs Fixed
+
+1. Modified the name of the holiday pay label.
+
+
+
+
+10/09/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+File: SearchTimesheets.aspx
+File: SearchTimesheets.aspx.vb
+File: TLR.css
+
+Bugs Fixed
+
+1. (Fogbugz #1138) Tooltips now appear for all employee type checkboxes.
+
+
+
+10/07/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+SP: usp_SELECT_TimesheetComptimeLeft
+File: TSFullTime.ascx.vb
+File: TSFullTime.ascx
+File: TLR.css
+
+Bugs Fixed
+
+1. A bug exists if you add comp time to a timesheet, create a new timesheet, add the remaining comp time
+    to that timesheet, go back to the first timesheet and add vacation. If you then delete the 
+    second timesheet, there is comp time left and vacation scheduled on a timesheet, a situation
+    that is not allowed. This bug has been fixed-a notice is now displayed to the user if the 
+    situation occurs.
+
+
+
+
+
+10/01/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+Table: Timesheet - added HolidayWorkedAdded (bit) column
+SP: usp_INSERT_TimesheetHolidayPay
+
+Bugs Fixed
+
+1. (Fogbugz #1131) Holiday Positive Time can now be removed from the timesheet and it will not reappear.
+
+
+
+
+9/30/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+SP: usp_SELECT_TimesheetGridData_LEAVE
+File: TLR.css
+File: TSFullTime.ascx.vb
+SP: created usp_SELECT_TimesheetContainsMisc
+File: GlobalText.resx
+
+Features Added
+
+1.  (Fogbugz #1091) Holidays now have a shaded color to offset them from the other days, and because of this
+    the day header is now changed to a darker blue
+2.  (Fogbugz #1088) Remarks are now required if the timesheet is submitted with the type "I" - misc.
+
+
+9/29/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+  SP: usp_INSERT_TimesheetEntry_LEAVE
+  SP: usp_UPSERT_TimesheetEntry_LEAVE
+  SP: usp_INSERT_TimesheetEntry_LEAVE_ImportFromWorkSchedule
+
+Features Added
+
+1.  If somebody clicks add timesheet and that timesheet contains a holiday, that portion is automatically 
+    filled in with a 'K' time of 8 hours. Autofilling the timesheet from the person's schedule
+    will not overwrite the 'K' time, although it can be deleted if necessary.
+
+
+
+9/28/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+  File: Searchtimesheets.aspx.vb
+  File: TLR.css
+  Table: EntryType - added EntryTypeID = 'K'
+  File: TSFulltime.ascx.vb
+  SP: created usp_INSERT_TimesheetHolidayPay
+  Table: EmployeeEntryType - added 'C', 'K' to the table
+
+  
+  
+  
+
+Bugs Fixed
+
+1.  Fixed issue that caused the timesheet search results repeater in SearchTimesheets.aspx.vb to 
+    not display any results in a search immediately following a search with 0 results, even if it contains
+    results.
+2.  Date on timesheet calendar (Timesheet.aspx) is getting cut off. Fontsize was decreased and width removed
+    so the date shows up and is not cut off.
+    
+9/25/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+  File: UnprocessedTimesheets.aspx
+  File: Searchtimesheets.aspx
+  SP: Created usp_SELECT_TimesheetEmployeeType
+  SP: Modified usp_SEARCH_Timesheet 
+  File: SearchEmployees.aspx
+
+Features Added
+
+1.  Added an "Employee Type ID" column to the search results to show if the employee
+    is classified, exempt, hourly, etc.
+2.  Added Note for ‘Search Employees’ indicating that only classified and exempt 
+    employees will be shown 
+
+
+
+9/24/2009 - Nathan Gudmunson
+----------------------------
+Files/Tables/Views/Stored Procedures Modified:
+
+  Table: modified Timesheet - add JobPercentFullTime field
+  View: modified vw_Timesheet - add JobPercentFullTime field
+  SP: created usp_SELECT_Timesheet_IsValid
+  SP: modified usp_TimesheetAction_ROUTE
+  Function: created uf_GetCompleteWeekTimesheets
+  File: mpDefault.Master
+  File: TLR.css
+  File: SearchTimesheets.aspx, Searchtimesheets.aspx.vb
+  SP: modified usp_SEARCH_Timesheet - added @ClassifiedEmployeesOnly param/logic
+
+Features Added
+
+1.  Employee timesheets are automatically processed by TLR if the supervisor 
+    submits the timesheet and it has the appropriate amount of hours 
+    worked by the employee. This is calculated based on the percent 
+    FTE (100%, 80%, 75%) compared to the hours entered (W) on the timesheet.
+2.  Removed Signature Delegation link from "HR" menu in mpDefault.Master
+3.  Added "search by classified staff only" link to timesheet search under 
+    Payroll->Search Timesheets
+
+
+

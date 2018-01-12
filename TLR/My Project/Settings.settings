@@ -1,0 +1,99 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="TimesheetStatus_InProcess" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="TimesheetAction_CreateTimesheet" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">4</Value>
+    </Setting>
+    <Setting Name="TimesheetAction_SubmitTimesheet" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="WorkScheduleStatus_Finalized" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="WorkScheduleStatus_Draft" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="WorkHoursEligibleEmployeeTypes" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">C</Value>
+    </Setting>
+    <Setting Name="TimesheetStatus_ProcessedByPayroll" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">5</Value>
+    </Setting>
+    <Setting Name="TimesheetStatus_SentToPayroll" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">4</Value>
+    </Setting>
+    <Setting Name="TimesheetStatus_AwaitingFinAidApproval" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">3</Value>
+    </Setting>
+    <Setting Name="TimesheetStatus_AwaitingSupervisorApproval" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="TimesheetAction_ApproveTimesheet" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">6</Value>
+    </Setting>
+    <Setting Name="TimesheetAction_RejectTimesheet" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">7</Value>
+    </Setting>
+    <Setting Name="TimesheetAction_ProcessTimesheet" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">8</Value>
+    </Setting>
+    <Setting Name="Email_FromAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">TLR@BellevueCollege.edu</Value>
+    </Setting>
+    <Setting Name="Email_ErrorSubject" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">TLR Error</Value>
+    </Setting>
+    <Setting Name="GrantBudgetAPPR" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">145</Value>
+    </Setting>
+    <Setting Name="TimesheetTypeID_Leave" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">2</Value>
+    </Setting>
+    <Setting Name="TimesheetTypeID_Time" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="SMTPServer" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FinancialAidEarningTypes" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">SWS, FWS</Value>
+    </Setting>
+    <Setting Name="RootURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://BellevueCollege.edu/TLR</Value>
+    </Setting>
+    <Setting Name="EntryTypeRequiresRemark" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">J,M,D,Z,E,I</Value>
+    </Setting>
+    <Setting Name="Email_ErrorNotificationDistributionList" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">nicole.swan@bellevuecollege.edu</Value>
+    </Setting>
+    <Setting Name="Role_FinAidAdmin" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">950653321 [Nicole Swan]</Value>
+    </Setting>
+    <Setting Name="Role_FinanceAdmin" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">950653321 [Nicole Swan]</Value>
+    </Setting>
+    <Setting Name="Role_HRAdmin" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">950653321 [Nicole Swan]</Value>
+    </Setting>
+    <Setting Name="Role_PayrollAdmin" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">950653321 [Nicole Swan]</Value>
+    </Setting>
+    <Setting Name="ReportPayrollURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://reports.bellevuecollege.edu/Reports/Pages/Folder.aspx?ItemPath=%2fTLR%2fPayroll+Reports</Value>
+    </Setting>
+    <Setting Name="ReportSupervisorURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://reports.bellevuecollege.edu/Reports/Pages/Folder.aspx?ItemPath=%2fTLR%2fSupervisor+Reports</Value>
+    </Setting>
+    <Setting Name="BudgetEarningType_LeaveNotAllowed" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">FWS</Value>
+    </Setting>
+    <Setting Name="JobEmployeeType_AllowsHourlyLeave" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">H,S</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

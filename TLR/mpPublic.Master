@@ -1,0 +1,25 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="mpPublic.master.vb" Inherits="TLR.mpPublic" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html>
+<head runat="server">
+    <link href="App_Themes/TLR.css" rel="stylesheet" type="text/css" />
+</head>
+<body class="public">
+    <form id="Form1" runat="server">
+    <p class="hidden"><a href="#content">Skip to content.</a></p>
+    
+    <div id="banner">
+            <img src="images/banner.jpg" alt="Time and Leave Reporting" width="900" height="77" />
+    </div>
+    <div id="container">
+              
+        <div class="content">
+            <asp:ContentPlaceHolder ID="cphFeedback" runat="server" />
+            <asp:contentplaceholder id="cphBody" runat="server" />
+        </div><!-- End #content -->
+        
+    </div><!-- End #container -->
+    </form>
+</body>
+</html>

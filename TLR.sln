@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "TLR", "TLR\TLR.vbproj", "{CE3CE135-B942-42C9-9393-6FB3A443F3E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+		TLR_dev|Any CPU = TLR_dev|Any CPU
+		TLR_prod|Any CPU = TLR_prod|Any CPU
+		TLR_test|Any CPU = TLR_test|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CE3CE135-B942-42C9-9393-6FB3A443F3E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE3CE135-B942-42C9-9393-6FB3A443F3E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE3CE135-B942-42C9-9393-6FB3A443F3E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE3CE135-B942-42C9-9393-6FB3A443F3E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE3CE135-B942-42C9-9393-6FB3A443F3E6}.TLR_dev|Any CPU.ActiveCfg = TLR_dev|Any CPU
+		{CE3CE135-B942-42C9-9393-6FB3A443F3E6}.TLR_dev|Any CPU.Build.0 = TLR_dev|Any CPU
+		{CE3CE135-B942-42C9-9393-6FB3A443F3E6}.TLR_prod|Any CPU.ActiveCfg = TLR_prod|Any CPU
+		{CE3CE135-B942-42C9-9393-6FB3A443F3E6}.TLR_prod|Any CPU.Build.0 = TLR_prod|Any CPU
+		{CE3CE135-B942-42C9-9393-6FB3A443F3E6}.TLR_test|Any CPU.ActiveCfg = TLR_test|Any CPU
+		{CE3CE135-B942-42C9-9393-6FB3A443F3E6}.TLR_test|Any CPU.Build.0 = TLR_test|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(VaultVsipSolution-v1) = preSolution
+		VaultHost = https://fortress.cascadia.edu/VaultService
+		VaultRepositoryID = 6
+		VaultRepositoryGUID = eb605251-a8a3-4a32-bc7b-7d7f6f81284b
+		ProjectCount = 1
+		ProjectRelativeDiskPath1 = TLR\TLR.vbproj
+	EndGlobalSection
+EndGlobal

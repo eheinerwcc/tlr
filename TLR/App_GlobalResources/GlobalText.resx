@@ -1,0 +1,531 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Error_LOGIN_InvalidLogin" xml:space="preserve">
+    <value>Invalid login credentials. Please try again.</value>
+  </data>
+  <data name="Error_LOGIN_PINBlank" xml:space="preserve">
+    <value>PIN can not be blank. Please try again.</value>
+  </data>
+  <data name="Error_LOGIN_PINNotNumeric" xml:space="preserve">
+    <value>PIN must be numeric. Please try again.</value>
+  </data>
+  <data name="Error_LOGIN_SIDblank" xml:space="preserve">
+    <value>SID can not be blank. Please try again.</value>
+  </data>
+  <data name="Error_LOGIN_SIDNot9Char" xml:space="preserve">
+    <value>SID must be 9 charactes long. Please try again.</value>
+  </data>
+  <data name="PageTitle_LOGIN" xml:space="preserve">
+    <value>Log In, Time and Leave Reporting</value>
+  </data>
+  <data name="Error_HOME_JobNotChosen" xml:space="preserve">
+    <value>Please remember to choose which job you want to submit time for before clicking on 'Create Timesheet'</value>
+  </data>
+  <data name="Error_HISTORY_EndDateBeforeStart" xml:space="preserve">
+    <value>The specified End Date cannot occur before the specified Start Date.  Please try again.</value>
+  </data>
+  <data name="Error_HISTORY_InvalidEndDate" xml:space="preserve">
+    <value>Please enter a valid End Date.</value>
+  </data>
+  <data name="Error_HISTORY_InvalidStartDate" xml:space="preserve">
+    <value>Please enter a valid Start Date.</value>
+  </data>
+  <data name="Note_TSFullTime_JawsUsers" xml:space="preserve">
+    <value>A note to JAWS Users:  To make this page easier to read and understand using the JAWS software, please go to JAWS settings and turn on what's called the“Abbreviation Expand” setting.  Here is how:
+1. Go to the JAWS Verbosity dialog by pressing Insert and the letter V.
+2. Expand the "Text Options"
+3. Select "Abbreviations Expand"
+4. Press spacebar to toggle it on if it isn't already.</value>
+  </data>
+  <data name="Error_TSFullTime_InvalidHours" xml:space="preserve">
+    <value>You must enter a valid value for 'Hours'.</value>
+  </data>
+  <data name="Error_TIMESHEET_InvalidTSID" xml:space="preserve">
+    <value>The timesheet ID is invalid.</value>
+  </data>
+  <data name="Error_TIMESHEET_NotOwner" xml:space="preserve">
+    <value>You can only edit your own timesheets.</value>
+  </data>
+  <data name="Error_TIMESHEET_TSIDNotFound" xml:space="preserve">
+    <value>The Timesheet ID requested was not found.</value>
+  </data>
+  <data name="Error_CALENDAR_InvalidDate" xml:space="preserve">
+    <value>Please enter a valid date.</value>
+  </data>
+  <data name="Error_TSFullTime_InvalidHours_Greater24Less0" xml:space="preserve">
+    <value>Please enter hours that are greater than 0 and less than or equal to 24. </value>
+  </data>
+  <data name="Error_TSFullTime_InvalidHours_NonNumeric" xml:space="preserve">
+    <value>Please enter a number.</value>
+  </data>
+  <data name="Error_TimeEntry_EndBeforeStart" xml:space="preserve">
+    <value>The End Time cannot occur before the Start Time.</value>
+  </data>
+  <data name="Error_TimeEntry_MealExceedsShift" xml:space="preserve">
+    <value>Your work hours must be greater than the meal time.</value>
+  </data>
+  <data name="Error_TimeEntry_StartEqualsEnd" xml:space="preserve">
+    <value>The Start and End times cannot be the same.</value>
+  </data>
+  <data name="Error_TSFullTime_InvalidHours_Decimal" xml:space="preserve">
+    <value>You can't have more than two numbers after the decimal point. </value>
+  </data>
+  <data name="Error_TIMESHEET_NotEditable" xml:space="preserve">
+    <value>You don't have permission to edit this timesheet.</value>
+  </data>
+  <data name="Error_TimeEntry_OverlappingEntry" xml:space="preserve">
+    <value>The times entered overlap with existing entries on this timesheet or another timesheet for the same pay period.</value>
+  </data>
+  <data name="PageTitle_APPROVETIMESHEETS" xml:space="preserve">
+    <value>Approve Timesheets, Time and Leave Reporting</value>
+  </data>
+  <data name="PageTitle_EDITTIMESHEET" xml:space="preserve">
+    <value>Edit Timesheet, Time and Leave Reporting</value>
+  </data>
+  <data name="PageTitle_HOME" xml:space="preserve">
+    <value>Home, Time and Leave Reporting</value>
+  </data>
+  <data name="PageTitle_LEAVEBALANCE" xml:space="preserve">
+    <value>Leave Balance, Time and Leave Reporting</value>
+  </data>
+  <data name="PageTitle_TIMESHEETHISTORY" xml:space="preserve">
+    <value>Timesheet History, Time and Leave Reporting</value>
+  </data>
+  <data name="PageTitle_VIEWTIMESHEET" xml:space="preserve">
+    <value>View Timesheet, Time and Leave Reporting</value>
+  </data>
+  <data name="PageTitle_WORKHOURS" xml:space="preserve">
+    <value>Work Hours, Time and Leave Reporting</value>
+  </data>
+  <data name="Error_TSFullTime_InvalidRemarkLength" xml:space="preserve">
+    <value>Remarks cannot be blank.</value>
+  </data>
+  <data name="Success_WORKHOURS_Approved" xml:space="preserve">
+    <value>Your work hours have been successfully submited and will be available for import when working with your timesheets.</value>
+  </data>
+  <data name="Error_HISTORY_NeitherDateProvided" xml:space="preserve">
+    <value>Please provide a Start and/or End date.</value>
+  </data>
+  <data name="Error_TimesheetHistory_InvalidEndDate" xml:space="preserve">
+    <value>The End Date must be a date.</value>
+  </data>
+  <data name="Error_TimesheetHistory_StartAndEndDatesEmpty" xml:space="preserve">
+    <value>Please enter at least one date.</value>
+  </data>
+  <data name="Error_TimesheetHistory_InvalidStartDate" xml:space="preserve">
+    <value>The Start Date must be a date.</value>
+  </data>
+  <data name="PageTitle_TIMESHEET" xml:space="preserve">
+    <value>Timesheet, Time and Leave Reporting</value>
+  </data>
+  <data name="Error_TIMESHEET_CommentBlank" xml:space="preserve">
+    <value>You must provide a comment when rejecting a timesheet.</value>
+  </data>
+  <data name="PageTitle_CALENDAR" xml:space="preserve">
+    <value>Calendar, Time and Leave Reporting</value>
+  </data>
+  <data name="PageTitle_EMPLOYEESBALANCE" xml:space="preserve">
+    <value>Employees' Balance, Time and Leave Reporting</value>
+  </data>
+  <data name="Error_TSFulltime_InvalidOTSplit" xml:space="preserve">
+    <value>The split of overtime does not add up to the total acrued overtime.</value>
+  </data>
+  <data name="Error_TSFullTime_24HoursExceeded" xml:space="preserve">
+    <value>You cannot have more than 24 hours of leave for a single day.</value>
+  </data>
+  <data name="Error_TSFullTime_BalanceExceeded" xml:space="preserve">
+    <value>This selection exceeds your available balance (including timesheets not yet processed by payroll).</value>
+  </data>
+  <data name="Error_TSFullTime_VacationBeforeComp" xml:space="preserve">
+    <value>You must use your compensatory (comp.) time before using your vacation. </value>
+  </data>
+  <data name="Error_TSParttime_InvalidAllocationText" xml:space="preserve">
+    <value>' is not a valid budget allocation amount.</value>
+  </data>
+  <data name="Error_TSParttime_InvalidEntryAllocation" xml:space="preserve">
+    <value>budget allocation amounts do not equal the total hours earned for the entry. </value>
+  </data>
+  <data name="Error_TSParttime_InvalidTimesheetAllocation" xml:space="preserve">
+    <value>Budget allocation amounts do not equal the total hours earned for this timesheet.</value>
+  </data>
+  <data name="Error_TSParttime_PercentAllocationMustBeWholeNumber" xml:space="preserve">
+    <value>Budget allocation amounts specified using percents must be in whole numbers.</value>
+  </data>
+  <data name="Error_TIMESHEET_EmptyTimesheet" xml:space="preserve">
+    <value>You cannot submit an empty timesheet.</value>
+  </data>
+  <data name="Error_TSParttime_MealBreakNotAllowed" xml:space="preserve">
+    <value>A meal break cannot be claimed on shifts less than 5 hours.</value>
+  </data>
+  <data name="PageTitle_SEARCHTIMESHEETS" xml:space="preserve">
+    <value>Search Timesheets, Time and Leave Reporting</value>
+  </data>
+  <data name="Error_TSFullTime_InvalidCompTimeUpdate" xml:space="preserve">
+    <value>Compensatory (comp.) time entries may not be deleted or reduced while unprocessed vacation entries exist.</value>
+  </data>
+  <data name="Error_WorkSchedule_40WHoursExceeded" xml:space="preserve">
+    <value>Work schedules are limited to 40 hours per week.</value>
+  </data>
+  <data name="Error_SEARCHTIMESHEETS_DateNeededToSearch" xml:space="preserve">
+    <value>You must select at least one valid (m/d/yyyy) date to search (if no employee is selected).</value>
+  </data>
+  <data name="Error_SEARCHTIMESHEETS_EndBeforeStart" xml:space="preserve">
+    <value>The Start Date cannot occur before the End Date.</value>
+  </data>
+  <data name="Error_SEARCHTIMESHEETS_StatusNeeded" xml:space="preserve">
+    <value>You must select at least one status to search.</value>
+  </data>
+  <data name="Error_TSFullTime_InvalidOTPrecision" xml:space="preserve">
+    <value>Overtime values are limited to two decimal places.</value>
+  </data>
+  <data name="Error_TSFullTime_InvalidOTValue" xml:space="preserve">
+    <value>Overtime values must be numeric.</value>
+  </data>
+  <data name="PageTitle_FileExport" xml:space="preserve">
+    <value>File Export, Time and Leave Reporting</value>
+  </data>
+  <data name="PageTitle_UpdateTimesheet" xml:space="preserve">
+    <value>Update Timesheet, Time and Leave Reporting</value>
+  </data>
+  <data name="Error_Error_GenericErrorMessage" xml:space="preserve">
+    <value>An unexpected error has occurred. The appropriate personnel have been notified of this problem and are actively investigating the issue.  Please restart your browser and return to this site to try completing your action again.</value>
+  </data>
+  <data name="PageTitle_ERROR" xml:space="preserve">
+    <value>Error, Time and Leave Reporting</value>
+  </data>
+  <data name="Error_UpdateTimesheet_InvalidBudgetNumber" xml:space="preserve">
+    <value>Budget numbers must be 14 characters in length and only contain numbers and letters.</value>
+  </data>
+  <data name="Error_UpdateTimesheet_InvalidPayRate" xml:space="preserve">
+    <value>Pay Rate must be specified as a number with no more than two decimal places.</value>
+  </data>
+  <data name="Error_UpdateTimesheet_InvalidTimesheetID" xml:space="preserve">
+    <value>Invalid Timesheet ID.</value>
+  </data>
+  <data name="Error_UpdateTimesheet_OneBudgetNecessary" xml:space="preserve">
+    <value>Every timesheet must have at least one budget.</value>
+  </data>
+  <data name="Error_UpdateTimesheet_BudgetNotEditable" xml:space="preserve">
+    <value>This timesheet  must first be rejected in order to update the budget information.</value>
+  </data>
+  <data name="Error_UpdateTimesheet_TimesheetIDNotFound" xml:space="preserve">
+    <value>Timesheet ID was not found.</value>
+  </data>
+  <data name="Success_UpdateTimesheet_BudgetNumberAdded" xml:space="preserve">
+    <value>Budget number successfully added to this timesheet.</value>
+  </data>
+  <data name="Success_UpdateTimesheet_SupervisorUpdated" xml:space="preserve">
+    <value>The supervisor for this timesheet has been successfully updated.</value>
+  </data>
+  <data name="Error_TIMESHEET_NoPermission" xml:space="preserve">
+    <value>You do not have permission to view this timesheet.</value>
+  </data>
+  <data name="PageTitle_UNPROCESSEDTIMESHEETS" xml:space="preserve">
+    <value>Unprocessed Timesheets, Time and Leave Reporting</value>
+  </data>
+  <data name="PageTitle_SEARCHEMPLOYEES" xml:space="preserve">
+    <value>Search Employees, Time and Leave Reporting</value>
+  </data>
+  <data name="Error_HOME_NoMorePayPeriods" xml:space="preserve">
+    <value>There are no more pay periods available for this job.</value>
+  </data>
+  <data name="Error_FileUpload_EmptyUpload" xml:space="preserve">
+    <value>No records were found for the selected pay period.  No file was generated.</value>
+  </data>
+  <data name="Error_FileUpload_InvalidExportType" xml:space="preserve">
+    <value>You need to access this page using the links in this site's menu.</value>
+  </data>
+  <data name="Error_FileUpload_UploadError" xml:space="preserve">
+    <value>An unknown error has occurred.  The appropriate personnel have been notified with the technical details of this error.</value>
+  </data>
+  <data name="Note_FileUpload_NoTimesheets" xml:space="preserve">
+    <value>There are no timesheets that can be exported into a file at this time.</value>
+  </data>
+  <data name="Success_FileUpload_UploadComplete" xml:space="preserve">
+    <value>File generation successful.  File name:</value>
+  </data>
+  <data name="Error_TSFulltime_PositiveTimeWeekLimitExceeded" xml:space="preserve">
+    <value>Positive time ('W') reporting is limited to 40 hours per week.</value>
+  </data>
+  <data name="Email_TimesheetRejected_EmployeeNotification" xml:space="preserve">
+    <value>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+
+&lt;html style="height: 100%" xmlns="http://www.w3.org/1999/xhtml" &gt;
+&lt;head&gt;&lt;title&gt;
+	Time &amp; Leave Reporting - Employee Notification
+&lt;/title&gt;&lt;/head&gt;
+&lt;body style="margin: auto; text-align: center; height: 100%; "&gt;
+
+&lt;div id="container" style="margin: auto; width: 92%; background-color: white; height: 100%;"&gt;
+	&lt;div style=" border-bottom: 0px solid #595959; position: relative; background-color: #474D89; height: 60px;"&gt;
+		&lt;h1 style="padding: 10px 10px 0px 10px; margin: auto; margin-bottom: 10px; font: 1.2em verdana; color: white; text-align: left; border: border-top: 0; "&gt;Time and Leave Reporting Notification&lt;/h1&gt;
+	&lt;/div&gt;
+	&lt;div style="padding: 5px 15px 10px 15px; text-align: left; font: 0.8em verdana;"&gt;
+		&lt;h2 style="font: bold 1.2em verdana; "&gt;#Subject#Your timesheet was rejected#/Subject#&lt;/h2&gt;
+		
+		&lt;p&gt;
+		#EMPLOYEEFIRSTNAME#,
+		&lt;br /&gt;
+        &lt;br /&gt;
+        Your timesheet for #BEGINDATE# - #ENDDATE# was rejected. Please go to &lt;a href="#APP_URL#/default.aspx?TimesheetID=#TIMESHEETID#"&gt;#APP_URL#/default.aspx?TimesheetID=#TIMESHEETID#&lt;/a&gt; to view the details.
+        &lt;br /&gt;
+        &lt;br /&gt;
+        &lt;br /&gt;
+        &lt;br /&gt;
+        [Note: Please do not reply to this email - it is not a monitored account.  For questions, please call the Payroll Office.]		
+		&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="Email_TimesheetRejected_SupervisorNotification" xml:space="preserve">
+    <value>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+
+&lt;html style="height: 100%" xmlns="http://www.w3.org/1999/xhtml" &gt;
+&lt;head&gt;&lt;title&gt;
+	Time &amp; Leave Reporting - Employee Notification
+&lt;/title&gt;&lt;/head&gt;
+&lt;body style="margin: auto; text-align: center; height: 100%; "&gt;
+
+&lt;div id="container" style="margin: auto; width: 92%; background-color: white; height: 100%;"&gt;
+	&lt;div style=" border-bottom: 1px solid #595959; position: relative; background-color: #474D89; height: 60px;"&gt;
+		&lt;h1 style="padding: 10px 10px 0px 10px; margin: auto; margin-bottom: 10px; font: 1.2em verdana; color: white; text-align: left; border: border-top: 0; "&gt;Time and Leave Reporting Notification&lt;/h1&gt;
+	&lt;/div&gt;
+	&lt;div style="padding: 5px 15px 10px 15px; text-align: left; font: 0.8em verdana;"&gt;
+		&lt;h2 style="font: bold 1.2em verdana; "&gt;#Subject#Timesheet rejected#/Subject#&lt;/h2&gt;
+		
+		&lt;p&gt;
+		#SUPERVISORFIRSTNAME#,
+		&lt;br /&gt;
+        &lt;br /&gt;
+        #EMPLOYEEFIRSTNAME# #EMPLOYEELASTNAME# had their timesheet for #BEGINDATE# - #ENDDATE# rejected. Please go to &lt;a href="#APP_URL#/default.aspx?TimesheetID=#TIMESHEETID#"&gt;#APP_URL#/default.aspx?TimesheetID=#TIMESHEETID#&lt;/a&gt; to view the details.
+        &lt;br /&gt;
+        &lt;br /&gt;
+        &lt;br /&gt;
+        &lt;br /&gt;
+        [Note: Please do not reply to this email - it is not a monitored account.  For questions, please call the Payroll Office.]		
+		&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="Email_WorkScheduleUpdated_NotifySupervisor" xml:space="preserve">
+    <value>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+
+&lt;html style="height: 100%" xmlns="http://www.w3.org/1999/xhtml" &gt;
+&lt;head&gt;&lt;title&gt;
+	Time &amp; Leave Reporting - Supervisor Notification
+&lt;/title&gt;&lt;/head&gt;
+&lt;body style="margin: auto; text-align: center; height: 100%; "&gt;
+
+&lt;div id="container" style="margin: auto; width: 92%; background-color: white; height: 100%;"&gt;
+	&lt;div style=" border-bottom: 1px solid #595959; position: relative; background-color: #474D89; height: 60px;"&gt;
+		&lt;h1 style="padding: 10px 10px 0px 10px; margin: auto; margin-bottom: 10px; font: 1.2em verdana; color: white; text-align: left; border: border-top: 0; "&gt;Time and Leave Reporting Notification&lt;/h1&gt;
+	&lt;/div&gt;
+	&lt;div style="padding: 5px 15px 10px 15px; text-align: left; font: 0.8em verdana;"&gt;
+		&lt;h2 style="font: bold 1.2em verdana; "&gt;#Subject# #EMPLOYEEFIRSTNAME# #EMPLOYEELASTNAME# has submitted his/her work schedule #/Subject#&lt;/h2&gt;
+		
+        &lt;br /&gt;
+        #EMPLOYEEFIRSTNAME# #EMPLOYEELASTNAME# has updated his/her work schedule:
+        &lt;br /&gt;
+         #WORKSCHEDULE#
+        &lt;br /&gt;
+
+To view all of your employees’ work schedules and more please go to
+		&lt;a href="#APP_URL#/SearchEmployees.aspx"&gt;#APP_URL#/SearchEmployees.aspx&lt;/a&gt; to view the details.
+        &lt;br /&gt;
+        &lt;br /&gt;
+        &lt;br /&gt;
+        &lt;br /&gt;
+        [Note: Please do not reply to this email - it is not a monitored account.  For questions, please call the Payroll Office.]		
+		&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="Error_Timesheet_CannotProcessFuture" xml:space="preserve">
+    <value>Timesheets for future pay periods cannot be processed.</value>
+  </data>
+  <data name="Error_LOGIN_InactiveEmployee" xml:space="preserve">
+    <value>Only active employees are allowed to access this site.</value>
+  </data>
+  <data name="Error_WorkSchedule_OverlappingEntry" xml:space="preserve">
+    <value>The times entered overlap with existing entries on your work schedule.</value>
+  </data>
+  <data name="Error_TSFullTime_RemarkRequired" xml:space="preserve">
+    <value>You have entered a leave type which requires a remark before submitting your timesheet.</value>
+  </data>
+  <data name="PageTitle_DELEGATION" xml:space="preserve">
+    <value>Delegation, Time and Leave Reporting</value>
+  </data>
+  <data name="Email_TimesheetSubmitted_SupervisorNotification" xml:space="preserve">
+    <value>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"&gt;
+
+&lt;html style="height: 100%" xmlns="http://www.w3.org/1999/xhtml" &gt;
+&lt;head&gt;&lt;title&gt;
+	Time &amp; Leave Reporting - Employee Notification
+&lt;/title&gt;&lt;/head&gt;
+&lt;body style="margin: auto; text-align: center; height: 100%; "&gt;
+
+&lt;div id="container" style="margin: auto; width: 92%; background-color: white; height: 100%;"&gt;
+	&lt;div style=" border-bottom: 1px solid #595959; position: relative; background-color: #474D89; height: 60px;"&gt;
+		&lt;h1 style="padding: 10px 10px 0px 10px; margin: auto; margin-bottom: 10px; font: 1.2em verdana; color: white; text-align: left; border: border-top: 0; "&gt;Time and Leave Reporting Notification&lt;/h1&gt;
+	&lt;/div&gt;
+	&lt;div style="padding: 5px 15px 10px 15px; text-align: left; font: 0.8em verdana;"&gt;
+		&lt;h2 style="font: bold 1.2em verdana; "&gt;#Subject#New timesheet submitted for your approval#/Subject#&lt;/h2&gt;
+		
+		&lt;p&gt;
+		#SUPERVISORFIRSTNAME#,
+		&lt;br /&gt;
+        &lt;br /&gt;
+        #EMPLOYEEFIRSTNAME# #EMPLOYEELASTNAME# has submitted a timesheet for #BEGINDATE# - #ENDDATE#. Please go to &lt;a href="#APP_URL#/default.aspx?TimesheetID=#TIMESHEETID#"&gt;#APP_URL#/default.aspx?TimesheetID=#TIMESHEETID#&lt;/a&gt; to approve that timesheet.
+        &lt;br /&gt;
+        &lt;br /&gt;
+        &lt;br /&gt;
+        &lt;br /&gt;
+        [Note: Please do not reply to this email - it is not a monitored account.  For questions, please call the Payroll Office.]		
+		&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</value>
+  </data>
+  <data name="Error_SEARCHTIMESHEETS_TypeNeeded" xml:space="preserve">
+    <value>You must select at least one type to search.</value>
+  </data>
+  <data name="Error_TSParttime_NoBudget" xml:space="preserve">
+    <value>This timesheet does not have any budgets associated with it.  Please contact Payroll for assistance.</value>
+  </data>
+  <data name="PageTitle_DELEGATEDTIMESHEETS" xml:space="preserve">
+    <value>Delegated Timesheets, Time and Leave Reporting</value>
+  </data>
+  <data name="Error_TIMESHEET_NeedRemark" xml:space="preserve">
+    <value>Please enter a remark if you have misc. time in your timesheet.</value>
+  </data>
+  <data name="Error_TSPartTime_BalanceExceeded" xml:space="preserve">
+    <value>This selection exceeds your available balance, including timesheets not yet processed by Payroll.</value>
+  </data>
+  <data name="Warning_LeaveTotalWithInvalidBudgetEarningType" xml:space="preserve">
+    <value>This timesheet has {0} hour(s) of leave. As a reminder, leave hours cannot be allocated to budgets of type {1}.</value>
+  </data>
+</root>
