@@ -26,7 +26,20 @@ Please check back here, as assumptions will be added/updated here as more inform
 - Hourly leave time will be counted as both time AND leave.
 	- Proven? ISH. The TIME file export job will create both time and leave entries in the respective generated files during export (and this is correct). However, there is ongoing discussion as to how best to mark time hours for leave for tax accounting purposes. The best solution here is still to be determined.
 
-Also, note that this may be the last time Bellevue College provides any updates as our code base has moved away from the original collaborative distribution. You should consider and plan how your institution will maintain and update TLR for itself going forward.
+#### Using release
+
+When using the .zip release rather than building your own, you should be able to use your current `Web.config` altering only to add the following two new settings to the `TLR.My.MySettings` section:
+
+````
+ <setting name="BudgetEarningType_LeaveNotAllowed" serializeAs="String">
+    <value>FWS,FWO</value>
+ </setting>
+ <setting name="JobEmployeeType_AllowsHourlyLeave" serializeAs="String">
+    <value>H,S</value>
+ </setting>
+````
+
+> Also, note that this may be the last time Bellevue College provides any updates as our code base has moved away from the original collaborative distribution. You should consider and plan how your institution will maintain and update TLR for itself going forward.
 
 ## Setting up the project for development
 
