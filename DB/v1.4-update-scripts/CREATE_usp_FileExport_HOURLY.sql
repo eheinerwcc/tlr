@@ -128,24 +128,6 @@ BEGIN
 	and ExportFileName=@FileNameTime
 	----------------------------------------------------------------------------------
 
-	---------------------------------------------------------------------------------
-	-- Added by Andrew Craswell 06/29/11 to remove people from export who have depleted their
-	--  work study awards
-	---------------------------------------------------------------------------------
-	declare @NegWorkStudy table (
-		SID char(9)
-		,AwardDeficit decimal(11,3)
-	)
-
-	insert into @NegWorkStudy
-	exec dbo.usp_SELECT_DepletedWorkStudyAwards @BeginDate, @EndPeriodDate
-
-	-- delete everyone ExportTimeData table who have earned more then their award
-	delete from ExportTimeData
-	WHERE SID in (select SID from @NegWorkStudy)
-	and ExportFileName=@FileNameTime
-	----------------------------------------------------------------------------------
-
 	------------------------ END TIME -----------------------------------------------
 
 
