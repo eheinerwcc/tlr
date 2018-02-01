@@ -173,15 +173,6 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("TLR@BellevueCollege.edu")>  _
-        Public ReadOnly Property Email_FromAddress() As String
-            Get
-                Return CType(Me("Email_FromAddress"),String)
-            End Get
-        End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("TLR Error")>  _
         Public ReadOnly Property Email_ErrorSubject() As String
             Get
@@ -236,15 +227,6 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("https://BellevueCollege.edu/TLR")>  _
-        Public ReadOnly Property RootURL() As String
-            Get
-                Return CType(Me("RootURL"),String)
-            End Get
-        End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.Configuration.DefaultSettingValueAttribute("J,M,D,Z,E,I")>  _
         Public ReadOnly Property EntryTypeRequiresRemark() As String
             Get
@@ -254,7 +236,34 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("nicole.swan@bellevuecollege.edu")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("H,S")>  _
+        Public ReadOnly Property JobEmployeeType_AllowsHourlyLeave() As String
+            Get
+                Return CType(Me("JobEmployeeType_AllowsHourlyLeave"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("youremail@domain.edu")>  _
+        Public ReadOnly Property Email_FromAddress() As String
+            Get
+                Return CType(Me("Email_FromAddress"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("https://yourdomain.edu/TLR")>  _
+        Public ReadOnly Property RootURL() As String
+            Get
+                Return CType(Me("RootURL"),String)
+            End Get
+        End Property
+        
+        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
+         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
         Public ReadOnly Property Email_ErrorNotificationDistributionList() As String
             Get
                 Return CType(Me("Email_ErrorNotificationDistributionList"),String)
@@ -263,7 +272,7 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("950653321 [Nicole Swan]")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
         Public ReadOnly Property Role_FinAidAdmin() As String
             Get
                 Return CType(Me("Role_FinAidAdmin"),String)
@@ -272,7 +281,7 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("950653321 [Nicole Swan]")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
         Public ReadOnly Property Role_FinanceAdmin() As String
             Get
                 Return CType(Me("Role_FinanceAdmin"),String)
@@ -281,7 +290,7 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("950653321 [Nicole Swan]")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
         Public ReadOnly Property Role_HRAdmin() As String
             Get
                 Return CType(Me("Role_HRAdmin"),String)
@@ -290,7 +299,7 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("950653321 [Nicole Swan]")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
         Public ReadOnly Property Role_PayrollAdmin() As String
             Get
                 Return CType(Me("Role_PayrollAdmin"),String)
@@ -299,8 +308,7 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://reports.bellevuecollege.edu/Reports/Pages/Folder.aspx?ItemPath=%2fTLR%2fPa"& _ 
-            "yroll+Reports")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
         Public ReadOnly Property ReportPayrollURL() As String
             Get
                 Return CType(Me("ReportPayrollURL"),String)
@@ -309,8 +317,7 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("http://reports.bellevuecollege.edu/Reports/Pages/Folder.aspx?ItemPath=%2fTLR%2fSu"& _ 
-            "pervisor+Reports")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("")>  _
         Public ReadOnly Property ReportSupervisorURL() As String
             Get
                 Return CType(Me("ReportSupervisorURL"),String)
@@ -319,19 +326,10 @@ Namespace My
         
         <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("FWS")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("FWS,FWO")>  _
         Public ReadOnly Property BudgetEarningType_LeaveNotAllowed() As String
             Get
                 Return CType(Me("BudgetEarningType_LeaveNotAllowed"),String)
-            End Get
-        End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("H,S")>  _
-        Public ReadOnly Property JobEmployeeType_AllowsHourlyLeave() As String
-            Get
-                Return CType(Me("JobEmployeeType_AllowsHourlyLeave"),String)
             End Get
         End Property
     End Class

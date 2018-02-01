@@ -41,9 +41,6 @@
     <Setting Name="TimesheetAction_ProcessTimesheet" Type="System.Int32" Scope="Application">
       <Value Profile="(Default)">8</Value>
     </Setting>
-    <Setting Name="Email_FromAddress" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">TLR@BellevueCollege.edu</Value>
-    </Setting>
     <Setting Name="Email_ErrorSubject" Type="System.String" Scope="Application">
       <Value Profile="(Default)">TLR Error</Value>
     </Setting>
@@ -62,38 +59,41 @@
     <Setting Name="FinancialAidEarningTypes" Type="System.String" Scope="Application">
       <Value Profile="(Default)">SWS, FWS</Value>
     </Setting>
-    <Setting Name="RootURL" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">https://BellevueCollege.edu/TLR</Value>
-    </Setting>
     <Setting Name="EntryTypeRequiresRemark" Type="System.String" Scope="Application">
       <Value Profile="(Default)">J,M,D,Z,E,I</Value>
     </Setting>
-    <Setting Name="Email_ErrorNotificationDistributionList" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">nicole.swan@bellevuecollege.edu</Value>
-    </Setting>
-    <Setting Name="Role_FinAidAdmin" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">950653321 [Nicole Swan]</Value>
-    </Setting>
-    <Setting Name="Role_FinanceAdmin" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">950653321 [Nicole Swan]</Value>
-    </Setting>
-    <Setting Name="Role_HRAdmin" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">950653321 [Nicole Swan]</Value>
-    </Setting>
-    <Setting Name="Role_PayrollAdmin" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">950653321 [Nicole Swan]</Value>
-    </Setting>
-    <Setting Name="ReportPayrollURL" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">http://reports.bellevuecollege.edu/Reports/Pages/Folder.aspx?ItemPath=%2fTLR%2fPayroll+Reports</Value>
-    </Setting>
-    <Setting Name="ReportSupervisorURL" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">http://reports.bellevuecollege.edu/Reports/Pages/Folder.aspx?ItemPath=%2fTLR%2fSupervisor+Reports</Value>
-    </Setting>
-    <Setting Name="BudgetEarningType_LeaveNotAllowed" Type="System.String" Scope="Application">
-      <Value Profile="(Default)">FWS</Value>
-    </Setting>
     <Setting Name="JobEmployeeType_AllowsHourlyLeave" Type="System.String" Scope="Application">
       <Value Profile="(Default)">H,S</Value>
+    </Setting>
+    <Setting Name="Email_FromAddress" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">youremail@domain.edu</Value>
+    </Setting>
+    <Setting Name="RootURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://yourdomain.edu/TLR</Value>
+    </Setting>
+    <Setting Name="Email_ErrorNotificationDistributionList" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Role_FinAidAdmin" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Role_FinanceAdmin" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Role_HRAdmin" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="Role_PayrollAdmin" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ReportPayrollURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="ReportSupervisorURL" Type="System.String" Scope="Application">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="BudgetEarningType_LeaveNotAllowed" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">FWS,FWO</Value>
     </Setting>
   </Settings>
 </SettingsFile>
