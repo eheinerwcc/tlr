@@ -106,7 +106,7 @@ Public Class clsTimesheet
 
     Shared Function IsValidLeaveEarningType(ByVal strEarningType) As Boolean
         'Returns whether timesheet job is hourly leave eligible
-        Dim invalidTypeList = My.Settings.BudgetEarningType_LeaveNotAllowed.Split(",")
+        Dim invalidTypeList = My.Settings.BudgetEarningType_LeaveNotAllowed.Trim.Replace(" ", "").Split(",")
         If Not invalidTypeList Is Nothing AndAlso invalidTypeList.Contains(strEarningType) Then
             Return False
         Else
