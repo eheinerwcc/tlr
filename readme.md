@@ -28,7 +28,7 @@ Please check back here, as assumptions will be added/updated here as more inform
 - Hourly leave time will be counted as both time AND leave.
 	- Proven? ISH. The TIME file export job will create both time and leave entries in the respective generated files during export (and this is correct). However, there is ongoing discussion as to how best to mark time hours for leave for tax accounting purposes. The best solution here is still to be determined.
 - Hourly employee leave balances will flow similar to how an exempt or classified employees currently does, i.e. eligible hourly employees will have entries in ODS EmployeeLeave and EmployeeLeaveHistory tables.
-	- Proven? TBD. We have yet to see how this info will flow from the HP to ODS.
+	- Proven? TBD. We have yet to see how this info will flow from the HP to ODS. As such, it's recommended to wait on release until this info can be verified after the first leave balance calculations are done for hourly employees and that flows into pertinent tables (at least Feb 1).
 
 #### Using release
 
