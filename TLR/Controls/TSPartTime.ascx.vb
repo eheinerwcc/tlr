@@ -42,6 +42,7 @@ Partial Public Class TS_PartTime
     Private dtTimesheet As DataTable
     Private strJobEmployeeTypeID As String
     Private blnIsDelegated As Boolean = False
+    Private blnContainsLeaveIneligibleBudget As Boolean = False
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Me.Visible Then
@@ -97,10 +98,11 @@ Partial Public Class TS_PartTime
                 End Select
 
                 BindTimesheetHeader()
-                BindTimesheetGrid()
                 BindBudgetAllocationControls(intTSID)
+                BindTimesheetGrid()
                 BindTimesheetTotals()
                 BindTimesheetRemarks()
+                DisplayBudgetWarning()
 
             End If
             BindOnLoadJavascript()
@@ -123,7 +125,7 @@ Partial Public Class TS_PartTime
 
         Dim blnContainsGrantBudget As Boolean = False
         Dim strGrantBudgetAPPRs() As String = My.Settings.GrantBudgetAPPR.Trim.Replace(" ", "").ToString.Split(",")
-        Dim blnContainsLeaveIneligibleBudget As Boolean = False
+        'Dim blnContainsLeaveIneligibleBudget As Boolean = False
 
         ViewState("BudgetCount") = dsBudgets.Tables(0).Rows.Count
 
@@ -154,13 +156,6 @@ Partial Public Class TS_PartTime
                         rptBudgetAllocationSelection.DataSource = dsBudgets
                         rptBudgetAllocationSelection.DataBind()
                     End If
-                End If
-
-                If blnContainsLeaveIneligibleBudget AndAlso ViewState("TotalTimesheetLeaveMinutes") IsNot Nothing AndAlso ViewState("TotalTimesheetLeaveMinutes") > 0 Then
-                    Dim leaveHours = ViewState("TotalTimesheetLeaveMinutes") / 60
-
-                    lblLeaveWarning.Text = String.Format(Resources.GlobalText.Warning_LeaveTotalWithInvalidBudgetEarningType, leaveHours, My.Settings.BudgetEarningType_LeaveNotAllowed)
-                    lblLeaveWarning.Visible = True
                 End If
             End If
         ElseIf intTimesheetStatusID <> My.Settings.TimesheetStatus_InProcess And dsBudgets.Tables(0).Rows.Count > 1 Then
@@ -272,6 +267,18 @@ Partial Public Class TS_PartTime
         lblGrandTotalHours.Text = IIf(ViewState("TotalTimesheetMinutes") > 0, Math.Floor(ViewState("TotalTimesheetMinutes") / 60) & " <aabr title='hours'>hrs</aabr> ", "") + IIf((ViewState("TotalTimesheetMinutes") Mod 60) > 0, ViewState("TotalTimesheetMinutes") Mod 60 & " <aabr title='minutes'>mins</aabr>", "") 'ViewState("TotalTimesheetMinutes")
         lblBudgetAllocationTotalHours.Text = ViewState("TotalTimesheetMinutes") / 60
 
+    End Sub
+
+    Private Sub DisplayBudgetWarning()
+        'Display leave warning as applicable based on budget, for supervisor view
+        If blnIsSupervisor AndAlso intTimesheetStatusID = My.Settings.TimesheetStatus_AwaitingSupervisorApproval Then
+            If blnContainsLeaveIneligibleBudget AndAlso ViewState("TotalTimesheetLeaveMinutes") IsNot Nothing AndAlso ViewState("TotalTimesheetLeaveMinutes") > 0 Then
+                Dim leaveHours = ViewState("TotalTimesheetLeaveMinutes") / 60
+
+                lblLeaveWarning.Text = String.Format(Resources.GlobalText.Warning_LeaveTotalWithInvalidBudgetEarningType, leaveHours, My.Settings.BudgetEarningType_LeaveNotAllowed)
+                lblLeaveWarning.Visible = True
+            End If
+        End If
     End Sub
 
     Protected Sub rptWeeks_ItemDataBound(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.RepeaterItemEventArgs) Handles rptWeeks.ItemDataBound
