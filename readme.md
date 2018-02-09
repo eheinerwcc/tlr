@@ -21,14 +21,14 @@ Because we started this work when we had no specific direction from the state bo
 
 Please check back here, as assumptions will be added/updated here as more information is received from the state board.
 
-- Eligible hourly students will be updated to have an HP LeaveAccrualCode of 'Y' similar to exempt and classified employees
+- Eligible hourly students will be updated to have an HP LeaveAccrualCode of 'Y' similar to exempt and classified employees.
 	- Proven? FALSE. However, you should not need to make any changes to account for this as this means there is no change how the type of timesheet is chosen for an employees. 
 - Hourly leave will be included as time in calculating overtime. 
-	- Proven? FALSE. This is NOT accounted for and you will need to update overtime calculations accordingly.
+	- Proven? FALSE-ISH. Indication is that it will NOT be included in calculating overtime. However, we do not yet have confirmation from the state board as to how we should do overtime calculations.
 - Hourly leave time will be counted as both time AND leave.
 	- Proven? ISH. The TIME file export job will create both time and leave entries in the respective generated files during export (and this is correct). However, there is ongoing discussion as to how best to mark time hours for leave for tax accounting purposes. The best solution here is still to be determined.
 - Hourly employee leave balances will flow similar to how an exempt or classified employees currently does, i.e. eligible hourly employees will have entries in ODS EmployeeLeave and EmployeeLeaveHistory tables.
-	- Proven? TBD. We have yet to see how this info will flow from the HP to ODS. As such, it's recommended to wait on release until this info can be verified after the first leave balance calculations are done for hourly employees and that flows into pertinent tables (at least Feb 1).
+	- Proven? TRUE. As of February 8, we're seeing the leave data from the HP flowing into the ODS EmployeeLeave and EmployeeLeaveHistory tables under the HSL leave type.
 
 #### Using release
 
@@ -67,7 +67,7 @@ Note: In the interest of keeping this version as similar framework-wise to the p
 
 #### Clone project
 
-Clone the project to a local repo. Ensure you are using the dev branch for development (or create a new one for your updates, depending on how extensive they are).
+Clone or fork the project to a local repo. Ensure you are using the dev branch for development (or create a new one for your updates, depending on how extensive they are).
 
 #### Update config files
 
