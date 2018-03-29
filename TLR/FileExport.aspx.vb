@@ -16,6 +16,8 @@ Partial Public Class FileExport
                 ElseIf Request.QueryString("ExportType") = My.Settings.TimesheetTypeID_Leave Then
                     lblPageHeader.Text = "Export File - Leave"
                     pLeaveNote.Visible = True
+                Else
+                    lblPageHeader.Visible = False
                 End If
                 BindControls()
             Else

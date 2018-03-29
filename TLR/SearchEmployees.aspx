@@ -73,12 +73,14 @@
         <asp:Repeater ID="rptWorkSchedule" runat="server">
         <HeaderTemplate>
         <table class="tbl">
-            <tr>
-                <th id="day">Day</th>
-                <th id="start">Start</th>
-                <th id="end">End</th>
-                <th id="break">Break</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th id="day">Day</th>
+                    <th id="start">Start</th>
+                    <th id="end">End</th>
+                    <th id="break">Break</th>
+                </tr>
+            </thead>
         </HeaderTemplate>
         <ItemTemplate>
             <tr>
@@ -100,11 +102,13 @@
         <asp:Repeater ID="rptLeaveBalance" runat="server">
             <HeaderTemplate>
             <table class="tbl">
-                <tr>
-                    <th id="leavetype">Leave Type</th>
-                    <th id="balance">Balance</th>
-                    <th id="accrualrate">Accrual Rate</th>
-                </tr>
+                <thead>
+                    <tr>
+                        <th id="leavetype">Leave Type</th>
+                        <th id="balance">Balance</th>
+                        <th id="accrualrate">Accrual Rate</th>
+                    </tr>
+                </thead>
             </HeaderTemplate>
                 <ItemTemplate>
                     <tr>
@@ -123,7 +127,7 @@
     
         <!-- Timesheets -->
         <h2>Timesheets</h2>
-        <asp:DropDownList ID="ddlViewPeriod" runat="server">
+        <asp:DropDownList ID="ddlViewPeriod" runat="server" aria-label="View period">
             <asp:ListItem Text="Last 6 Months" Value="6" />    
             <asp:ListItem Text="Last Year" Value="12" />
             <asp:ListItem Text="Last 3 Years" Value="36" />
@@ -134,13 +138,15 @@
         <asp:Repeater ID="rptTimesheets" runat="server">
             <HeaderTemplate>
                 <table class="timesheetlist">
-                    <tr>
-                        <th class="pay_period">Pay Period</th>
-                        <th>Title</th>
-                        <th>Department</th>
-                        <th>Supervisor</th>
-                        <th>Status</th>
-                    </tr>
+                    <thead>
+                        <tr>
+                            <th class="pay_period">Pay Period</th>
+                            <th>Title</th>
+                            <th>Department</th>
+                            <th>Supervisor</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
             </HeaderTemplate>
             <ItemTemplate>
                 <tr>

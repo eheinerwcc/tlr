@@ -4,12 +4,14 @@
   <asp:Repeater ID="rptTimesheetActionLog" runat="server">
    <HeaderTemplate>
    <table class="tbl">
-    <tr>
-        <th id="date">Date</th>
-        <th id="action">Action</th>
-        <th id="actionby">Action By</th>
-        <th id="comment">Comment</th>
-    </tr>
+       <thead>
+        <tr>
+            <th id="date">Date</th>
+            <th id="action">Action</th>
+            <th id="actionby">Action By</th>
+            <th id="comment">Comment</th>
+        </tr>
+       </thead>
    </HeaderTemplate>
    <ItemTemplate>
     <tr>
@@ -23,3 +25,4 @@
    </table>
    </FooterTemplate>
    </asp:Repeater> 
+</div>

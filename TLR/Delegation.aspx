@@ -36,10 +36,12 @@
         <HeaderTemplate>
         <h2>Please choose a person from the list</h2>
         <table class="tbl">
-        <tr>
-            <th>Name</th>
-            <th>SID</th>
-        </tr>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>SID</th>
+                </tr>
+            </thead>
         </HeaderTemplate>
         <ItemTemplate>
         <tr>
@@ -76,9 +78,7 @@
             <tr>
                 <td><%#DataBinder.Eval(Container, "DataItem.SupervisorDisplayName")%></td>
                 <td>
-                    <span onclick="javascript:return confirm('Are you sure you want to remove this delegation?')">
-                        <asp:button ID="btnDeleteDelegation" CssClass="link_button" runat="server" text="Delete" OnClick='DeleteDelegation' CommandArgument='<%#Container.DataItem("DelegationID")%>' />
-                    </span>
+                    <asp:button ID="btnDeleteDelegation" CssClass="link_button" runat="server" text="Delete" OnClientClick="return confirm('Are you sure you want to remove this delegation?');" OnClick='DeleteDelegation' CommandArgument='<%#Container.DataItem("DelegationID")%>' />
                 </td>
             </tr>
             </ItemTemplate>
@@ -88,7 +88,7 @@
             </asp:Repeater>
 
         <h2>Add New Delegation:</h2>
-            Select User: <asp:DropDownList ID="ddlSupervisors" runat="server" DataTextField="DisplayName" DataValueField="SuperID" />
+            <label for="<%=ddlSupervisors.ClientID %>">Select User:</label>&nbsp;<asp:DropDownList ID="ddlSupervisors" runat="server" DataTextField="DisplayName" DataValueField="SuperID" />
             <asp:Button ID="btnAddDelegation" runat="server" Text="Add Delegation" />
         </asp:panel>
                 </div>

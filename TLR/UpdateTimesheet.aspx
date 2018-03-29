@@ -76,11 +76,13 @@
     <HeaderTemplate>
     <h2>Please choose a person from the list</h2>
     <table class="tbl">
-    <tr>
-        <th>Name</th>
-        <th>SID</th>
-        <th>Department</th>
-    </tr>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>SID</th>
+                <th>Department</th>
+            </tr>
+        </thead>
     </HeaderTemplate>
     <ItemTemplate>
     <tr>
@@ -107,20 +109,20 @@
     <HeaderTemplate>
     <h2>Existing Budgets:</h2>
     <table class="tbl">
-    <tr>
-        <th>Budget</th>
-        <th>Earning Type</th>
-        <th>Delete</th>
-    </tr>
+        <thead>
+            <tr>
+                <th>Budget</th>
+                <th>Earning Type</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
     </HeaderTemplate>
     <ItemTemplate>
     <tr>
         <td><%#DataBinder.Eval(Container, "DataItem.BudgetNumber")%></td>    
         <td><%#DataBinder.Eval(Container, "DataItem.EarningTypeID")%></td>
         <td>
-            <span onclick="javascript:return confirm('Are you sure you want to remove this budget from the timesheet?')">
-                <asp:button ID="btnDeleteBudget" CssClass="link_button" runat="server" text="Delete" OnClick='DeleteBudget' CommandArgument='<%#Container.DataItem("TimesheetBudgetID")%>' />
-            </span>
+            <asp:button ID="btnDeleteBudget" CssClass="link_button" runat="server" text="Delete" OnClientClick="return confirm('Are you sure you want to remove this budget from the timesheet?');" OnClick='DeleteBudget' CommandArgument='<%#Container.DataItem("TimesheetBudgetID")%>' />
         </td>
     </tr>
     </ItemTemplate>

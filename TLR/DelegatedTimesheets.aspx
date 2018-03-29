@@ -12,13 +12,15 @@
    <asp:Repeater ID="rptActiveTimesheets" runat="server">
    <HeaderTemplate>
    <table class="tbl timesheetlist">
-    <tr>
-        <th>Employee</th>
-        <th class="pay_period">Pay Period</th>
-        <th>Job Title</th>
-        <th>Department</th>
-        <th class="pay_rate">Pay Rate</th>
-    </tr>
+       <thead>
+            <tr>
+                <th>Employee</th>
+                <th class="pay_period">Pay Period</th>
+                <th>Job Title</th>
+                <th>Department</th>
+                <th class="pay_rate">Pay Rate</th>
+            </tr>
+       </thead>
    </HeaderTemplate>
    <ItemTemplate>
     <tr>
@@ -44,14 +46,16 @@
     <asp:Repeater ID="rptJobList" runat="server">
     <HeaderTemplate>
     <table class="tbl joblist">
-    <tr>
-    <th class="job_number">#</th>
-    <th>Employee</th>
-    <th>Job Title</th>
-    <th>Department</th>
-    <th class="pay_rate">Pay Rate</th>
-    <th>Pay Period</th>
-    </tr>
+        <thead>
+            <tr>
+                <th class="job_number">#</th>
+                <th>Employee</th>
+                <th>Job Title</th>
+                <th>Department</th>
+                <th class="pay_rate">Pay Rate</th>
+                <th>Pay Period</th>
+            </tr>
+        </thead>
     </HeaderTemplate>
     <ItemTemplate>
     <tr>

@@ -1,324 +1,313 @@
 ﻿/*=====> Public Master page Template */
-.public
-{
-  margin: 0;
-  text-align: center;
-  background: #D4D4C4 url(../images/bkg_main_bottom_LogIn.gif) repeat-y top center;
-  border: solid 0px;
+a, a:visited, a:hover, a:active, a:focus {
+    color: blue;
+    background-color: transparent;
+    text-decoration: underline;
 }
 
-.public .content
-{
-  text-align: center;
-  padding-left: 5px;
-  padding-top: 15px;
-  width: 100%;
-  text-align: center;
-  float: left;
-  display: block;
-  font-family: Tahoma;
-  font-size: .8em;
-  border: solid 0px green;
+.public {
+    margin: 0;
+    text-align: center;
+    background: #D4D4C4 url(../images/bkg_main_bottom_LogIn.gif) repeat-y top center;
+    border: solid 0px;
 }
 
-#compTimeMsg 
-{
-  padding-top: 20px;
-  color: #f00;
-}
-.ts_totals td.left
-{
-  text-align: left;  
-  color: #f00;
+    .public .content {
+        text-align: center;
+        padding-left: 5px;
+        padding-top: 15px;
+        width: 100%;
+        text-align: center;
+        float: left;
+        display: block;
+        font-family: Tahoma;
+        font-size: .8em;
+        border: solid 0px green;
+    }
+
+#compTimeMsg {
+    padding-top: 20px;
+    color: #f00;
 }
 
-.login
-{
-  text-align: center;
-  width: 30em;
-  margin: auto;
+.ts_totals td.left {
+    text-align: left;
+    color: #f00;
 }
 
-
-.login h1
-{
-  font-size: 1.3em;
-  border: 0;
-  color: #8A8BB3;
-  margin-bottom: 1em;
-  width: 100%;
-  text-align: center;
+.login {
+    text-align: center;
+    width: 30em;
+    margin: auto;
 }
 
 
-
-.login label
-{
-  width: 7em;
-  font-size: 1.2em;
-  font-weight: bold;
-  text-align: right;
-  padding-right: 1.2em;
-}
-.login span.action
-{
-  padding-left: 9.9em;
-}
-.login .field
-{
-  background-color: #ECF0F5;
-  font-size: 1.2em;
-}
-.login .button
-{
-  font-size: 1.2em;
-  height: 28px;
-  vertical-align: middle;
-  font-weight: bold;
-  color: Black;
-  background-color: #BFCFE7;
-  border: solid 1px black;
-  vertical-align: middle;
-}
+    .login h1 {
+        font-size: 1.3em;
+        border: 0;
+        color: #53537F;
+        margin-bottom: 1em;
+        width: 100%;
+        text-align: center;
+    }
 
 
 
+    .login label {
+        width: 7em;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-align: right;
+        padding-right: 1.2em;
+    }
 
-.hidden
-{
-  position: absolute;
-  left: -9999px;
-  top: -9999px;
-  display: block;
-}
+    .login span.action {
+        padding-left: 9.9em;
+    }
 
-body
-{
-  margin: 0;
-  text-align: center;
-  background: #D4D4C4 url(../images/bkg_main_bottom.gif) repeat-y top center;
-  border: solid 0px;
-}
-#banner
-{
-  background: #474D89 url(../images/background_top.jpg) repeat-y top center;
-  width: 100%;
-  height: 77px;
-  text-align: center;
-  display: block;
-  height: 77px;
-  border: solid 0px yellow;
-}
-#devAppVersion 
-{
-  background-color: #f77;
-  color: #555;
-}
-#testAppVersion 
-{
-  background-color: #fc7;
-  color: #555;
-}
+    .login .field {
+        background-color: #ECF0F5;
+        font-size: 1.2em;
+    }
 
-#container
-{
-  margin: auto;
-  width: 900px;
-  height: 100%;
-  text-align: center;
-  border: solid 0px green;
-}
-#navigation
-{
-  text-align: left;
-  float: left;
-  width: 136px;
-  display: block;
-  font-family: Tahoma;
-  font-size: 0.8em;
-  border: solid 0px yellow;
-}
-#navigation .username
-{
-  font-weight: bold;
-  font-size: 1.1em;
-  display: block;
-  padding: 0.5em 0.2em 0.5em 0.3em;
-}
-#navigation .sub_navigation
-{
-  padding-left: .4em;
-}
-#navigation .sub_navigation.bottom
-{
-  padding-bottom: 0;
-}
-#navigation .sub_navigation.top
-{
-  padding-top: .5em;
-}
-#navigation h5
-{
-  font-weight: bold;
-}
-
-#navigation .logout
-{
-  padding: 0 0 0 .3em;
-}
-#navigation .logout_button
-{
-  background-color: #DBE3EE;
-  border: solid 1px black;
-}
-
-
-#navigation ul
-{
-  margin: 0 0 0 0;
-  padding: 0;
-}
-#navigation ul li
-{
-  list-style-type: none;
-}
-#navigation span.section
-{
-  margin: .8em 0 0 0;
-  padding: 0.1em 0 0.1em 0;
-  height: 1.3em;
-  display: block;
-  width: 100%;
-  font-family: Tahoma;
-  font-weight: bold;
-  text-indent: .4em;
-  background-color: #6768AA;
-  color: white;
-  font-size: 0.9em;
-}
-#navigation li ul li
-{
-  margin: 0.1em 0 0.1em 0;
-  font-weight: normal;
-  text-indent: 0.4em;
-}
-#navigation li.section li
-{
-  padding: 0.1em 0 0.1em 0;
-}
-#navigation a:visited, #navigation a:hover, #navigation a:active
-{
-  color: Blue;
-}
+    .login .button {
+        font-size: 1.2em;
+        height: 28px;
+        vertical-align: middle;
+        font-weight: bold;
+        color: Black;
+        background-color: #DBE3EE;
+        border: solid 1px black;
+        vertical-align: middle;
+    }
 
 
 
-#content
-{
-  text-align: left;
-  padding-left: 7px;
-  padding-top: 15px;
-  float: left;
-  width: 755px;
-  display: block;
-  font-family: Tahoma;
-  font-size: .8em;
-  border: solid 0px green;
+
+.hidden {
+    position: absolute;
+    left: -9999px;
+    top: -9999px;
+    display: block;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    background: #D4D4C4 url(../images/bkg_main_bottom.gif) repeat-y top center;
+    border: solid 0px;
+}
+
+#banner {
+    background: #474D89 url(../images/background_top.jpg) repeat-y top center;
+    width: 100%;
+    height: 77px;
+    text-align: center;
+    display: block;
+    height: 77px;
+    border: solid 0px yellow;
+}
+
+#devAppVersion {
+    background-color: #f77;
+    color: #000000;
+}
+
+#testAppVersion {
+    background-color: #fc7;
+    color: #555;
+}
+
+#container {
+    margin: auto;
+    width: 900px;
+    height: 100%;
+    text-align: center;
+    border: solid 0px green;
+}
+
+#navigation {
+    text-align: left;
+    float: left;
+    width: 136px;
+    display: block;
+    font-family: Tahoma;
+    font-size: 0.8em;
+    border: solid 0px yellow;
+}
+
+    #navigation .username {
+        font-weight: bold;
+        font-size: 1.1em;
+        display: block;
+        padding: 0.5em 0.2em 0.5em 0.3em;
+    }
+
+    #navigation .sub_navigation {
+        padding-left: .4em;
+    }
+
+        #navigation .sub_navigation.bottom {
+            padding-bottom: 0;
+        }
+
+        #navigation .sub_navigation.top {
+            padding-top: .5em;
+        }
+
+    #navigation h5 {
+        font-weight: bold;
+    }
+
+    #navigation .logout {
+        padding: 0 0 0 .3em;
+    }
+
+    #navigation .logout_button {
+        background-color: #DBE3EE;
+        border: solid 1px black;
+    }
+
+
+    #navigation ul {
+        margin: 0 0 0 0;
+        padding: 0;
+    }
+
+        #navigation ul li {
+            list-style-type: none;
+        }
+
+    #navigation span.section {
+        margin: .8em 0 0 0;
+        padding: 0.1em 0 0.1em 0;
+        height: 1.3em;
+        display: block;
+        width: 100%;
+        font-family: Tahoma;
+        font-weight: bold;
+        text-indent: .4em;
+        background-color: #4F548C;
+        color: white;
+        font-size: 0.9em;
+    }
+
+    #navigation li ul li {
+        margin: 0.1em 0 0.1em 0;
+        font-weight: normal;
+        text-indent: 0.4em;
+    }
+
+    #navigation li.section li {
+        padding: 0.1em 0 0.1em 0;
+    }
+
+    #navigation a:visited, #navigation a:hover, #navigation a:active, #navigation a:focus {
+        color: Blue;
+    }
+
+
+
+#content {
+    text-align: left;
+    padding-left: 7px;
+    padding-top: 15px;
+    float: left;
+    width: 755px;
+    display: block;
+    font-family: Tahoma;
+    font-size: .8em;
+    border: solid 0px green;
 }
 
 
 /* ______________________ Feedback Classes _____________________ */
-.panel_feedback_success
-{
-  padding: 15px 15px 15px 15px;
-  margin: 10px 10px 10px 0px;
-  border: 3px double #336699;
-  background-color: white;
-  color: #336699;
-  font: 12pt/150% Tahoma, Verdana;
+.panel_feedback_success {
+    padding: 15px 15px 15px 15px;
+    margin: 10px 10px 10px 0px;
+    border: 3px double #006600;
+    background-color: white;
+    color: #006600;
+    font: 12pt/150% Tahoma, Verdana;
 }
-.panel_feedback_error
-{
-  padding: 15px 15px 15px 15px;
-  margin: 10px 10px 10px 0px;
-  border: 3px double red;
-  background-color: white;
-  color: red;
-  font: 12pt/150% Tahoma, Verdana;
-  text-align: left;
+
+.panel_feedback_error {
+    padding: 15px 15px 15px 15px;
+    margin: 10px 10px 10px 0px;
+    border: 3px double red;
+    background-color: white;
+    color: #B30000;
+    font: 12pt/150% Tahoma, Verdana;
+    text-align: left;
 }
-.panel_feedback_error ul
-{
-  padding: 0px 0px 0px 25px;
-  margin: 0px 0px 0px 0px;
-  font-size: 10pt;
-  line-height: 160%;
-}
-.panel_feedback_note
-{
-  padding: 15px 15px 15px 15px;
-  margin: 10px 10px 10px 0px;
-  border: 3px double green;
-  background-color: white;
-  color: green;
-  font: 12pt/150% Tahoma, Verdana;
+
+    .panel_feedback_error ul {
+        padding: 0px 0px 0px 25px;
+        margin: 0px 0px 0px 0px;
+        font-size: 10pt;
+        line-height: 160%;
+    }
+
+.panel_feedback_note {
+    padding: 15px 15px 15px 15px;
+    margin: 10px 10px 10px 0px;
+    border: 3px double #006600;
+    background-color: white;
+    color: #006600;
+    font: 12pt/150% Tahoma, Verdana;
 }
 
 
 
-h1
-{
-  font-size: 1.3em;
-  color: #8A8BB3;
-  border-bottom: solid 1px #8A8BB3;
-  margin-bottom: 1em;
-  width: 80%;
+h1 {
+    font-size: 1.3em;
+    color: #53537F;
+    border-bottom: solid 1px #8A8BB3;
+    margin-bottom: 1em;
+    width: 80%;
 }
-h2
-{
-  margin: 1em 0 0.4em 0em; /*border-bottom: solid 1px black;   */
-  color: #6768AA;
-  font-size: 1.1em;
+
+h2 {
+    margin: 1em 0 0.4em 0em; /*border-bottom: solid 1px black;   */
+    color: #53537F;
+    font-size: 1.1em;
 }
 
 
 
-fieldset
-{
-  font-size: .9em;
-  padding: 0 0 0 0;
-  border: 0;
-}
-fieldset legend
-{
-  position: absolute;
-  left: -9999px;
-  top: -9999px;
-  display: none; /*display: block;*/
-}
-fieldset .invisible_label
-{
-  position: absolute;
-  left: -9999px;
-  top: -9999px;
-  display: block;
+fieldset {
+    font-size: .9em;
+    padding: 0 0 0 0;
+    border: 0;
 }
 
-abbr
-{
-  text-decoration: none;
-  border-bottom: 0;
+    fieldset legend {
+        position: absolute;
+        left: -9999px;
+        top: -9999px;
+        display: none; /*display: block;*/
+    }
+
+    fieldset .invisible_label {
+        position: absolute;
+        left: -9999px;
+        top: -9999px;
+        display: block;
+    }
+
+abbr {
+    text-decoration: none;
+    border-bottom: 0;
 }
 
-.box
-{
-  overflow: hidden;
+.box {
+    overflow: hidden;
 }
 
-.clear
-{
-  clear: both;
+.clear {
+    clear: both;
 }
+
 .hide {
     display: none;
 }
@@ -333,179 +322,165 @@ abbr
 /*******************************************************************************************************/
 /*******************************************************************************************************/
 
-ol
-{
-  padding: 0;
-  margin: auto;
-}
-ol li
-{
-  clear: both;
-  list-style-type: none;
-  text-align: left;
-  padding: .4em .2em .4em .2em;
-  margin: auto;
-}
-ol li label
-{
-  display: block;
-  float: left;
-}
-ol li span
-{
-  display: block;
-  float: left;
+ol {
+    padding: 0;
+    margin: auto;
 }
 
-table
-{
-  border-collapse: collapse; /*margin: 0.5em 0 .5em 0;*/
-}
-table th
-{
-  border: 0;
-  border-bottom: 1px solid black;
-  padding: 0 .8em 0 .2em;
-  text-align: left;
-}
-table td
-{
-  /*padding: .4em .8em .2em .2em;*/
-  border-bottom: 1px solid #dddddd;
+    ol li {
+        clear: both;
+        list-style-type: none;
+        text-align: left;
+        padding: .4em .2em .4em .2em;
+        margin: auto;
+    }
+
+        ol li label {
+            display: block;
+            float: left;
+        }
+
+        ol li span {
+            display: block;
+            float: left;
+        }
+
+table {
+    border-collapse: collapse; /*margin: 0.5em 0 .5em 0;*/
 }
 
-table label
-{
-  font-size: 1em;
-}
+    table th {
+        border: 0;
+        border-bottom: 1px solid black;
+        padding: 0 .8em 0 .2em;
+        text-align: left;
+    }
+
+    table td {
+        /*padding: .4em .8em .2em .2em;*/
+        border-bottom: 1px solid #dddddd;
+    }
+
+    table label {
+        font-size: 1em;
+    }
 
 /*text showing above the repeater(table) saying "no records found" etc.*/
-.rpt_message
-{
-  padding: 1em 0 1em 0;
-  font-size: 1.1em;
+.rpt_message {
+    padding: 1em 0 1em 0;
+    font-size: 1.1em;
 }
 
 /*put padding code for tables into a separate css because of the calendar picker controls which can't have padding*/
-.tbl td
-{
-  padding: .4em .8em .2em .2em;
-  vertical-align: middle;
+.tbl td {
+    padding: .4em .8em .2em .2em;
+    vertical-align: middle;
 }
 /*CSS FOR ALL TABLES DISPLAYING LIST OF TIMESHEETS*/
-.timesheetlist
-{
-  width: 100%;
-}
-.timesheetlist td
-{
-  padding: .4em 1.2em .2em .2em;
-}
-.timesheetlist th.pay_period
-{
-  width: 11em;
-}
-.timesheetlist th.pay_rate
-{
-  width: 7em;
+.timesheetlist {
+    width: 100%;
 }
 
-.link_button
-{
-  background-color: Transparent;
-  border: none;
-  cursor: pointer; /*background: url(../images/bkg_underline.gif) 1px 0px 0px;*/ /*border-bottom: solid 1px blue;*/
-  color: Blue;
-  padding: 0;
-  margin: 0;
-  height: 17px;
-  text-align: left;
-  text-decoration: underline;
+    .timesheetlist td {
+        padding: .4em 1.2em .2em .2em;
+    }
+
+    .timesheetlist th.pay_period {
+        width: 11em;
+    }
+
+    .timesheetlist th.pay_rate {
+        width: 7em;
+    }
+
+.link_button {
+    background-color: Transparent;
+    border: none;
+    cursor: pointer; /*background: url(../images/bkg_underline.gif) 1px 0px 0px;*/ /*border-bottom: solid 1px blue;*/
+    color: Blue;
+    padding: 0;
+    margin: 0;
+    height: 17px;
+    text-align: left;
+    text-decoration: underline;
 }
 
-.button
-{
-  color: Black;
-  background-color: #BFCFE7;
-  border: solid 1px black;
-  vertical-align: middle;
+.button {
+    color: Black;
+    background-color: #DBE3EE;
+    border: solid 1px black;
+    vertical-align: middle;
 }
 
-.button_important
-{
-  font-weight: bold;
-  color: Black;
-  background-color: #BFCFE7;
-  border: solid 4px gray;
-  vertical-align: middle;
+.button_important {
+    font-weight: bold;
+    color: Black;
+    background-color: #BFCFE7;
+    border: solid 4px gray;
+    vertical-align: middle;
 }
 
 
-.field
-{
-  background-color: #ECF0F5;
-  color: Black;
+.field {
+    background-color: #ECF0F5;
+    color: Black;
 }
 
 
 
 /*Work Hours Message Panels */
-.workhours_message
-{
-  width: 30em;
-  border: solid 1px black;
-  padding: .4em .4em .4em .4em;
-  background-color: #EFF4FA;
-  margin-bottom: 1em;
+.workhours_message {
+    width: 30em;
+    border: solid 1px black;
+    padding: .4em .4em .4em .4em;
+    background-color: #EFF4FA;
+    margin-bottom: 1em;
 }
-.workhours_message p
-{
-  padding-bottom: .5em;
-  line-height: 1.2em;
-}
+
+    .workhours_message p {
+        padding-bottom: .5em;
+        line-height: 1.2em;
+    }
 
 /*******************************************************************************************************/
 /*Home.aspx******************************************************************************************************/
 /*******************************************************************************************************/
 
 /*CSS FOR TABLE DISPLAYING LIST OF JOBS*/
-.joblist
-{
-  width: 100%;
+.joblist {
+    width: 100%;
 }
-.joblist td
-{
-  padding: .4em 1.2em .2em .2em;
-}
-.joblist th.pay_period
-{
-  width: 10em;
-}
-.joblist th.job_number
-{
-  text-align: center;
-  visibility: hidden;
-  padding-left: 0.4em;
-  width: 2em;
-}
-.pnl_workschedule
-{
-  margin-top: 20px;
+
+    .joblist td {
+        padding: .4em 1.2em .2em .2em;
+    }
+
+    .joblist th.pay_period {
+        width: 10em;
+    }
+
+    .joblist th.job_number {
+        text-align: center;
+        visibility: hidden;
+        padding-left: 0.4em;
+        width: 2em;
+    }
+
+.pnl_workschedule {
+    margin-top: 20px;
 }
 
 
 /*******************************************************************************************************/
 /*LeaveBalance.aspx*************************************************************************************/
 /*******************************************************************************************************/
-#anniversary_date 
-{
-  padding-top: 10px;
+#anniversary_date {
+    padding-top: 10px;
 }
 
-#anniversary_date .title
-{
-  font-weight: bold;
-}
+    #anniversary_date .title {
+        font-weight: bold;
+    }
 
 /*******************************************************************************************************/
 /*Timesheet.aspx******************************************************************************************************/
@@ -514,127 +489,122 @@ table label
 
 /* Full time timesheet details*/
 /*******************************************/
-.ts_details_leave
-{
-  width: 370px;
-  display: block;
-  float: left;
-  padding-bottom: 0;
+.ts_details_leave {
+    width: 370px;
+    display: block;
+    float: left;
+    padding-bottom: 0;
 }
-.ts_details_leave ol
-{
-}
-.ts_details_leave ol li
-{
-  padding: .15em 0 .15em 0;
-}
-.ts_details_leave ol li .field_name
-{
-  width: 100px;
-  font-weight: bold;
-  display: block;
-  float: left;
-  color: #515253;
-  border: solid 0px green;
-}
-.ts_details_leave ol li .field_value
-{
-  width: 265px;
-  float: left;
-}
-.ts_details_leave ol li .field_value_status
-{
-  width: 16em;
-  font-weight: bold;
-  float: left;
-  color: #606181;
-}
+
+    .ts_details_leave ol {
+    }
+
+        .ts_details_leave ol li {
+            padding: .15em 0 .15em 0;
+        }
+
+            .ts_details_leave ol li .field_name {
+                width: 100px;
+                font-weight: bold;
+                display: block;
+                float: left;
+                color: #515253;
+                border: solid 0px green;
+            }
+
+            .ts_details_leave ol li .field_value {
+                width: 265px;
+                float: left;
+            }
+
+            .ts_details_leave ol li .field_value_status {
+                width: 16em;
+                font-weight: bold;
+                float: left;
+                color: #606181;
+            }
 
 /* Parttime timesheet details*/
 /*******************************************/
-.ts_details_time
-{
-  width: 100%;
-  display: block;
-  float: none;
-  padding-bottom: 0;
-}
-.ts_details_time h2
-{
-  position: absolute;
-  left: -9999px;
-  top: -9999px;
-  display: block;
-  overflow: hidden;
-}
-.ts_details_time ol
-{
-  width: 100%;
+.ts_details_time {
+    width: 100%;
+    display: block;
+    float: none;
+    padding-bottom: 0;
 }
 
-.ts_details_time ol li
-{
-  padding: .15em 0 .15em 0;
-}
-.ts_details_time ol li .field_name
-{
-  width: 8em;
-  font-weight: bold;
-  color: #515253;
-}
-.ts_details_time ol li .field_value
-{
-  width: 80%;
-}
-.ts_details_time ol li .field_value_status
-{
-  width: 16em;
-  font-weight: bold;
-  font-size: 1.1em;
-  color: #606181;
-}
+    .ts_details_time h2 {
+        position: absolute;
+        left: -9999px;
+        top: -9999px;
+        display: block;
+        overflow: hidden;
+    }
+
+    .ts_details_time ol {
+        width: 100%;
+    }
+
+        .ts_details_time ol li {
+            padding: .15em 0 .15em 0;
+        }
+
+            .ts_details_time ol li .field_name {
+                width: 8em;
+                font-weight: bold;
+                color: #515253;
+            }
+
+            .ts_details_time ol li .field_value {
+                width: 80%;
+            }
+
+            .ts_details_time ol li .field_value_status {
+                width: 16em;
+                font-weight: bold;
+                font-size: 1.1em;
+                color: #606181;
+            }
 
 
 /* Full time timesheet totals*/
 /*******************************************/
-.ts_totals
-{
-  width: 420px;
-  /*display: block;*/
-  float: left;
-  padding-top: 1.2em;
+.ts_totals {
+    width: 420px;
+    /*display: block;*/
+    float: left;
+    padding-top: 1.2em;
 }
-.ts_totals td, .ts_totals th
-{
-  text-align: right;
-  padding-left: 1em;
-}
-.ts_totals td.leave_type
-{
-  text-align: center;
-}
-.ts_totals td.negative_balance
-{
-  color: Red;
-}
+
+    .ts_totals td, .ts_totals th {
+        text-align: right;
+        padding-left: 1em;
+    }
+
+        .ts_totals td.leave_type {
+            text-align: center;
+        }
+
+        .ts_totals td.negative_balance {
+            color: Red;
+        }
 
 /* Full time timesheet add/edit entry*/
 /*******************************************/
-.add_entry
-{
-  width: 300px;
-  display: block; /*clear: both;*/
-  float: left;
-  padding-bottom: 1em;
+.add_entry {
+    width: 300px;
+    display: block; /*clear: both;*/
+    float: left;
+    padding-bottom: 1em;
 }
-.add_entry label
-{
-  width: 90px;
-}
-.add_entry span.update
-{
-  padding-left: 90px;
-}
+
+    .add_entry label {
+        width: 90px;
+    }
+
+    .add_entry span.update {
+        padding-left: 90px;
+    }
 
 
 /* Part time timesheet add/edit entry*/
@@ -643,476 +613,460 @@ table label
     float: left;
     margin-bottom: 1em;
 }
-.add_entry_time label
-{
-  width: 90px;
-}
-.add_entry_time span
-{
-  width: 400px;
-}
-.add_entry_time span.update
-{
-  padding-left: 90px;
-}
-.add_entry_time p.meal_time_disclaimer
-{
-  padding: 0;
-  padding-bottom: .5em;
-  margin: 0;
-}
-.add_entry_time .meal_time_invisible
-{
-  position: absolute;
-  left: -9999px;
-  top: -9999px;
-  display: block;
-  overflow: hidden;
-}
+
+    .add_entry_time label {
+        width: 90px;
+    }
+
+    .add_entry_time span {
+        width: 400px;
+    }
+
+        .add_entry_time span.update {
+            padding-left: 90px;
+        }
+
+    .add_entry_time p.meal_time_disclaimer {
+        padding: 0;
+        padding-bottom: .5em;
+        margin: 0;
+    }
+
+    .add_entry_time .meal_time_invisible {
+        position: absolute;
+        left: -9999px;
+        top: -9999px;
+        display: block;
+        overflow: hidden;
+    }
 
 
 
 
 
-.vacation_approval
-{
-  font-size: 1.1em;
-  padding: 0 0 .4em 0;
-  width: 583px;
+.vacation_approval {
+    font-size: 1.1em;
+    padding: 0 0 .4em 0;
+    width: 583px;
 }
 
 /* LEAVE TIMESHEET OUTPUT*/
 /* only necessary to have a top border on the timesheet */
-.payperiod
-{
-  border: 1px solid #777777;
-  border-right: 0;
-  border-bottom: 0;
-  width: 589px;
-}
-.payperiod h3, .jaws_note
-{
-  position: absolute;
-  top: -9999;
-  left: -9999px;
-}
-.week
-{
-  padding: 0;
-  margin: 0;
-}
-.week li
-{
-  list-style-type: none;
-  width: 83px;
-  min-height: 83px;
-  float: left;
-  border: 1px solid #777777;
-  border-top: 0;
-  border-left: 0;
-  overflow: hidden;
-}
-.week h4
-{
-  /* background-color: #D6DFEC; */
-  background-color: #607da5;
-  height: 1.5em;
-  border-bottom: 1px solid #777777;
-  font-size: 1.0em;
-  margin: 0;
-  padding: 0;
-  /*color: #333333; */
-  color: #FFF;
-  width: 100%;
-}
-.week h4 .day
-{
-  float: left;
-  display: block;
-  padding: .2em 0em .2em .2em;
-}
-.week h4 .date
-{
-  float: right;
-  display: block;
-  padding: .2em .3em .2em .2em;
-  text-align: right;
+.payperiod {
+    border: 1px solid #777777;
+    border-right: 0;
+    border-bottom: 0;
+    width: 589px;
 }
 
-.week li.holiday
-{
-  background-color: #D6DFEC;
+    .payperiod h3, .jaws_note {
+        position: absolute;
+        top: -9999;
+        left: -9999px;
+    }
+
+.week {
+    padding: 0;
+    margin: 0;
 }
 
-.week li.holiday abbr.holiday 
-{
-  display: none;
+    .week li {
+        list-style-type: none;
+        width: 83px;
+        min-height: 83px;
+        float: left;
+        border: 1px solid #777777;
+        border-top: 0;
+        border-left: 0;
+        overflow: hidden;
+    }
+
+    .week h4 {
+        /* background-color: #D6DFEC; */
+        background-color: #4F548C;
+        height: 1.5em;
+        border-bottom: 1px solid #777777;
+        font-size: 1.0em;
+        margin: 0;
+        padding: 0;
+        /*color: #333333; */
+        color: #FFF;
+        width: 100%;
+    }
+
+        .week h4 .day {
+            float: left;
+            display: block;
+            padding: .2em 0em .2em .2em;
+        }
+
+        .week h4 .date {
+            float: right;
+            display: block;
+            padding: .2em .3em .2em .2em;
+            text-align: right;
+        }
+
+    .week li.holiday {
+        background-color: #D6DFEC;
+    }
+
+        .week li.holiday abbr.holiday {
+            display: none;
+        }
+
+.entries {
+    padding: .2em;
+    margin: 0;
 }
 
-.entries
-{
-  padding: .2em;
-  margin: 0;
-}
-.inactive, .week li.inactive 
-{
-  background-color: #AAABCA;
-}
-.entries li
-{
-  width: auto;
-  height: auto;
-  min-height: 0px;
-  float: none;
-  border: 0;
-  font-size: 0.9em;
-}
-.ts_entry_button
-{
-  background-color: Transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
-  color: Blue;
-  border-bottom: solid 1px blue;
-  cursor: pointer;
-  height: 1.3em;
+.inactive, .week li.inactive {
+    background-color: #AAABCA;
 }
 
-.ts_entry_button_disabled
-{
-  background-color: Transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
-  color: Black;
-  height: 1.3em;
+.entries li {
+    width: auto;
+    height: auto;
+    min-height: 0px;
+    float: none;
+    border: 0;
+    font-size: 0.9em;
+}
+
+.ts_entry_button {
+    background-color: Transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: Blue;
+    border-bottom: solid 1px blue;
+    cursor: pointer;
+    height: 1.3em;
+}
+
+.ts_entry_button_disabled {
+    background-color: Transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: Black;
+    height: 1.3em;
 }
 
 
 /*HOURLY TIMESHEET OUTPUT
 /*****/
 /* =====> Part time user control */
-.hourly
-{
-  padding-top: 20px;
-  text-align: right;
+.hourly {
+    padding-top: 20px;
+    text-align: right;
 }
-.hourly table
-{
-  width: 100%;
-}
-.hourly h3
-{
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-}
-.hourly thead th
-{
-  text-align: center;
-  padding: none;
-}
-.hourly .holiday {
-    background-color: #ffbbbb;
-}
-.hourly .leave {
-    background-color: #dff0d8;
-}
-.hourly tr.next th
-{
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
-  border-collapse: collapse;
-  border-style: none;
-}
-.hourly td
-{
-  border: 1px solid #eeeeee;
-  text-align: right;
-}
-.hourly .odd td
-{
-  background-color: #EFEBEF;
-}
-.hourly td.start_time, td.end_time
-{
-  width: 7em;
-}
-.hourly td.meal_time
-{
-  width: 7em;
-}
-.hourly td.total_time
-{
-  width: 10em;
-}
-.hourly .odd th
-{
-  background-color: #D6DFE7;
-}
-.hourly tfoot
-{
-  background-color: #EFF3FF;
-}
-.total_hours, .total_week_hours, .overtime
-{
-  /*position: absolute;                        left: 60%;*/
-  border: 1px solid #E7EBF7;
-  text-align: right;
-  background-color: #EFF3FF;
-  font-weight: bold;
-  vertical-align: middle;
+
+    .hourly table {
+        width: 100%;
+    }
+
+    .hourly h3 {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+    }
+
+    .hourly thead th {
+        text-align: center;
+        padding: none;
+    }
+
+    .hourly .holiday {
+        background-color: #ffbbbb;
+    }
+
+    .hourly .leave {
+        background-color: #dff0d8;
+    }
+
+    .hourly tr.next th {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+        border-collapse: collapse;
+        border-style: none;
+    }
+
+    .hourly td {
+        border: 1px solid #eeeeee;
+        text-align: right;
+    }
+
+    .hourly .odd td {
+        background-color: #EFEBEF;
+    }
+
+    .hourly td.start_time, td.end_time {
+        width: 7em;
+    }
+
+    .hourly td.meal_time {
+        width: 7em;
+    }
+
+    .hourly td.total_time {
+        width: 10em;
+    }
+
+    .hourly .odd th {
+        background-color: #D6DFE7;
+    }
+
+    .hourly tfoot {
+        background-color: #EFF3FF;
+    }
+
+.total_hours, .total_week_hours, .overtime {
+    /*position: absolute;                        left: 60%;*/
+    border: 1px solid #E7EBF7;
+    text-align: right;
+    background-color: #EFF3FF;
+    font-weight: bold;
+    vertical-align: middle;
 }
 
 
-.hourly th.day_and_date
-{
-  font-weight: normal;
-  border: 1px solid #E7EBF7;
-  width: 7em;
-  height: 20px;
-  vertical-align: middle;
-  text-align: right;
-  padding-top: .2em;
-  padding-bottom: .2em; /*padding: .2em .2em .2em .2em;*/
-}
-.hourly abbr
-{
-  border-bottom: 0; /*width: 2.5em;*/ /*float: left;*/
-}
-.hourly .inactive
-{
-  background-color: #E5E5E5;
-  color: #666666;
-  border-bottom: 1px solid #E7EBF7;
-}
-.hourly .link
-{
-  background-color: Transparent;
-  border: none;
-  padding: 0;
-  margin: 0;
-  color: Blue;
-  border-bottom: solid 1px blue;
-  cursor: pointer;
-  height: 1.3em;
-}
-.hourly .link:hover
-{
-  cursor: pointer;
+.hourly th.day_and_date {
+    font-weight: normal;
+    border: 1px solid #E7EBF7;
+    width: 7em;
+    height: 20px;
+    vertical-align: middle;
+    text-align: right;
+    padding-top: .2em;
+    padding-bottom: .2em; /*padding: .2em .2em .2em .2em;*/
 }
 
-.ts_time_grandtotal
-{
-  font-weight: bold;
-  font-size: 1.4em;
-  padding-top: .4em;
-  padding-bottom: .4em;
-}
-.ts_time_grandtotal .totalhours
-{
+.hourly abbr {
+    border-bottom: 0; /*width: 2.5em;*/ /*float: left;*/
 }
 
+.hourly .inactive {
+    background-color: #E5E5E5;
+    color: #000000;
+    border-bottom: 1px solid #E7EBF7;
+}
 
-.validator, .budgetNumber
-{
-  float: right;
+.hourly .link {
+    background-color: Transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: Blue;
+    border-bottom: solid 1px blue;
+    cursor: pointer;
+    height: 1.3em;
+}
+
+    .hourly .link:hover {
+        cursor: pointer;
+    }
+
+.ts_time_grandtotal {
+    font-weight: bold;
+    font-size: 1.4em;
+    padding-top: .4em;
+    padding-bottom: .4em;
+}
+
+    .ts_time_grandtotal .totalhours {
+    }
+
+
+.validator, .budgetNumber {
+    float: right;
 }
 
 
 /*Remarks*/
 /* =====> Remarks section */
-.remarks h2
-{
-  padding-top: .2em;
-  padding-bottom: 0em;
-}
-.remarks th
-{
-  position: absolute;
-  top: -9999px;
-  left: -9999px;
+.remarks h2 {
+    padding-top: .2em;
+    padding-bottom: 0em;
 }
 
-.remarks table
-{
-  border: 1px solid #DBDB93;
-  width: 589px;
+.remarks th {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
 }
 
-.remarks td
-{
-  background-color: #FCFDC4;
-  border-bottom: 1px solid #DBDB93;
-  padding: .2em .3em .2em .2em;
-  background-color: #FCFDC4;
+.remarks table {
+    border: 1px solid #DBDB93;
+    width: 589px;
 }
-.remarks td.text
-{
-  font-style: italic;
-  vertical-align: text-top;
-  padding-right: 0.4em;
-  text-align: left;
-  background-color: #FCFDC4;
+
+.remarks td {
+    background-color: #FCFDC4;
+    border-bottom: 1px solid #DBDB93;
+    padding: .2em .3em .2em .2em;
+    background-color: #FCFDC4;
 }
-.remarks td.author_date
-{
-  width: 10em;
-  vertical-align: text-top;
-  background-color: #FCFDC4;
+
+    .remarks td.text {
+        font-style: italic;
+        vertical-align: text-top;
+        padding-right: 0.4em;
+        text-align: left;
+        background-color: #FCFDC4;
+    }
+
+    .remarks td.author_date {
+        width: 10em;
+        vertical-align: text-top;
+        background-color: #FCFDC4;
+    }
+
+    .remarks td.action {
+        width: 8em;
+        background-color: #FCFDC4;
+    }
+
+.remarks .link {
+    background-color: #FCFDC4;
+    border: 0;
+    padding: 0;
+    background: url(../images/bkg_underline.gif) 0px 1px;
+    color: Blue;
+    cursor: pointer;
 }
-.remarks td.action
-{
-  width: 8em;
-  background-color: #FCFDC4;
+
+    .remarks .link:hover {
+        cursor: pointer;
+    }
+
+.remark_text {
+    vertical-align: top;
 }
-.remarks .link
-{
-  background-color: #FCFDC4;
-  border: 0;
-  padding: 0;
-  background: url(../images/bkg_underline.gif) 0px 1px;
-  color: Blue;
-  cursor: pointer;
+
+.remark_edit {
+    display: block;
+    vertical-align: text-top;
 }
-.remarks .link:hover
-{
-  cursor: pointer;
-}
-.remark_text
-{
-  vertical-align: top;
-}
-.remark_edit
-{
-  display: block;
-  vertical-align: text-top;
-}
-.remark_edit input
-{
-  vertical-align: top;
-}
+
+    .remark_edit input {
+        vertical-align: top;
+    }
 
 
 /*Aggregate budget allocation for hourly*/
-.budget_allocation
-{
-  padding-top: 1em;
-}
-.budget_allocation fieldset
-{
-  padding-bottom: .5em;
-}
-.budget_allocation fieldset label
-{
-  width: 11em;
-  float: left;
-  font-weight: normal;
+.budget_allocation {
+    padding-top: 1em;
 }
 
-.budget_allocation table td
-{
-  padding-right: 2em;
-}
+    .budget_allocation fieldset {
+        padding-bottom: .5em;
+    }
 
-.budget_allocation .warning {
-    background-color: #fcf8e3;
-    border-color: #f9da9a;
-    color: #8a6d3b;
-    padding: 1em;
-    border-radius: 4px;
-    margin: 1em;
-    display: block;
-}
+        .budget_allocation fieldset label {
+            width: 11em;
+            float: left;
+            font-weight: normal;
+        }
+
+    .budget_allocation table td {
+        padding-right: 2em;
+    }
+
+    .budget_allocation .warning {
+        background-color: #fcf8e3;
+        border-color: #f9da9a;
+        color: #8a6d3b;
+        padding: 1em;
+        border-radius: 4px;
+        margin: 1em;
+        display: block;
+    }
 
 /*Budget allocation per entry*/
-.entry_budget_allocation
-{
-  margin: 0;
-  font-size: .9em;
+.entry_budget_allocation {
+    margin: 0;
+    font-size: .9em;
 }
-.entry_budget_allocation th, .entry_budget_allocation .odd th
-{
-  border-style: none;
-  background-color: Transparent !important;
-  padding-top: .1em;
-  padding-right: 0;
-  text-align: center;
-}
-.entry_budget_allocation td, .entry_budget_allocation .odd td
-{
-  border: none !important;
-  text-align: center;
-  padding: 0;
-}
+
+    .entry_budget_allocation th, .entry_budget_allocation .odd th {
+        border-style: none;
+        background-color: Transparent !important;
+        padding-top: .1em;
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .entry_budget_allocation td, .entry_budget_allocation .odd td {
+        border: none !important;
+        text-align: center;
+        padding: 0;
+    }
 
 
 /*Div whith buttons for submitting, deleting, approving, rejecting*/
-.ts_actions
-{
-  padding-top: 2em;
-  padding-bottom: 1em;
+.ts_actions {
+    padding-top: 2em;
+    padding-bottom: 1em;
 }
-.ts_actions label
-{
-  width: 4em;
-  display: inline;
-}
-.ts_actions .comment
-{
-  vertical-align: top;
-  width: 20em;
-  height: 6em;
-}
-.ts_action_panel
-{
-  vertical-align: top;
+
+    .ts_actions label {
+        width: 4em;
+        display: inline;
+    }
+
+    .ts_actions .comment {
+        vertical-align: top;
+        width: 20em;
+        height: 6em;
+    }
+
+.ts_action_panel {
+    vertical-align: top;
 }
 
 
 /*Overtime*/
-.ts_overtime
-{
-  width: 589px;
-  display: block;
-  float: none;
-  margin: 1em 0 1.2em 0;
+.ts_overtime {
+    width: 589px;
+    display: block;
+    float: none;
+    margin: 1em 0 1.2em 0;
 }
-.ts_overtime .panel
-{
-  background: #EFF4FA;
-  border: solid 1px #B5B6B7;
-  padding: .5em 0 .5em .4em;
-  overflow: hidden;
-}
-.ts_overtime h2
-{
-  margin-top: 0;
-}
-.ts_overtime p
-{
-  padding-top: 0;
-  padding-bottom: .9em;
-  margin: 0;
-}
-.ts_overtime ol
-{
-}
-.ts_overtime ol li .field_name
-{
-  width: 11em;
-}
-.ts_overtime ol li .field_value
-{
-  width: 8em;
-}
-.ts_overtime .ot_hours
-{
-  font-size: 1.3em;
-  font-weight: bold;
-}
+
+    .ts_overtime .panel {
+        background: #EFF4FA;
+        border: solid 1px #B5B6B7;
+        padding: .5em 0 .5em .4em;
+        overflow: hidden;
+    }
+
+    .ts_overtime h2 {
+        margin-top: 0;
+    }
+
+    .ts_overtime p {
+        padding-top: 0;
+        padding-bottom: .9em;
+        margin: 0;
+    }
+
+    .ts_overtime ol {
+    }
+
+        .ts_overtime ol li .field_name {
+            width: 11em;
+        }
+
+        .ts_overtime ol li .field_value {
+            width: 8em;
+        }
+
+    .ts_overtime .ot_hours {
+        font-size: 1.3em;
+        font-weight: bold;
+    }
 /*******************************************************************************************************/
 /*******************************************************************************************************/
 
@@ -1123,26 +1077,25 @@ table label
 /*******************************************************************************************************/
 /*EmployeesBalance.aspx******************************************************************************************************/
 /*******************************************************************************************************/
-.employeesbalance
-{
-  width: 100%;
+.employeesbalance {
+    width: 100%;
 }
-.employeesbalance td
-{
-  padding: .4em 1.2em .2em .2em;
-}
-.employeesbalance td.anniv_date
-{
-  text-align: right;
-}
-.employeesbalance .leavecodeabbr
-{
-  text-decoration: none;
-}
-.employeesbalance .accrue
-{
-  color: Green;
-}
+
+    .employeesbalance td {
+        padding: .4em 1.2em .2em .2em;
+    }
+
+        .employeesbalance td.anniv_date {
+            text-align: right;
+        }
+
+    .employeesbalance .leavecodeabbr {
+        text-decoration: none;
+    }
+
+    .employeesbalance .accrue {
+        color: Green;
+    }
 /*******************************************************************************************************/
 /*******************************************************************************************************/
 
@@ -1150,21 +1103,20 @@ table label
 /*******************************************************************************************************/
 /*TimesheetHistory.aspx******************************************************************************************************/
 /*******************************************************************************************************/
-.tsarchive
-{
-  width: 400px;
-  display: block;
-  clear: both;
-  padding-bottom: 1em;
+.tsarchive {
+    width: 400px;
+    display: block;
+    clear: both;
+    padding-bottom: 1em;
 }
-.tsarchive label
-{
-  width: 90px;
-}
-.tsarchive span.search
-{
-  padding-left: 90px;
-}
+
+    .tsarchive label {
+        width: 90px;
+    }
+
+    .tsarchive span.search {
+        padding-left: 90px;
+    }
 /*******************************************************************************************************/
 /*******************************************************************************************************/
 
@@ -1174,52 +1126,50 @@ table label
 /*Calendar.aspx******************************************************************************************************/
 /*******************************************************************************************************/
 
-.specialDayEntry
-{
-  text-align: left;
-  padding-bottom: 2em;
-}
-.specialDayEntry ol li label
-{
-  width: 70px;
-  margin: 0px;
-}
-.specialDayEntry ol li span.action
-{
-  padding-left: 70px;
+.specialDayEntry {
+    text-align: left;
+    padding-bottom: 2em;
 }
 
-.specialDays
-{
-  vertical-align: top;
-  text-align: left;
-  margin: 0px;
-  padding-bottom: 1em;
+    .specialDayEntry ol li label {
+        width: 70px;
+        margin: 0px;
+    }
+
+    .specialDayEntry ol li span.action {
+        padding-left: 70px;
+    }
+
+.specialDays {
+    vertical-align: top;
+    text-align: left;
+    margin: 0px;
+    padding-bottom: 1em;
 }
-.specialDays ol
-{
-  width: 20em;
-  margin: 0px;
-}
-.specialDays ol li
-{
-  width: 20em;
-  margin: 0px;
-}
-.specialDays ol li label
-{
-  width: 6em;
-  margin: 0px;
-}
-.specialDays ol li span
-{
-  width: 14em;
-  margin: 0px;
-}
-.specialDays ol li span.action
-{
-  padding-left: 4em;
-}
+
+    .specialDays ol {
+        width: 20em;
+        margin: 0px;
+    }
+
+        .specialDays ol li {
+            width: 20em;
+            margin: 0px;
+        }
+
+            .specialDays ol li label {
+                width: 6em;
+                margin: 0px;
+            }
+
+            .specialDays ol li span {
+                width: 14em;
+                margin: 0px;
+            }
+
+                .specialDays ol li span.action {
+                    padding-left: 4em;
+                }
 
 /*******************************************************************************************************/
 /*******************************************************************************************************/
@@ -1229,128 +1179,117 @@ table label
 /*******************************************************************************************************/
 /*SearchTimesheets.aspx******************************************************************************************************/
 /*******************************************************************************************************/
-.timesheet_search td
-{
-  border: none;
+.timesheet_search td {
+    border: none;
 }
-.timesheet_search li label
-{
-  width: 96px;
+
+.timesheet_search li label {
+    width: 96px;
 }
-.timesheet_search li .employee_types label
-{
-  width: 10px;
+
+.timesheet_search li .employee_types label {
+    width: 10px;
 }
-.timesheet_search li .employee_types input
-{
-  margin-right: 18px;
+
+.timesheet_search li .employee_types input {
+    margin-right: 18px;
 }
-.timesheet_search li.active_employees, .timesheet_search li.employee_types
-{
-  padding-left: 100px;
+
+.timesheet_search li.active_employees, .timesheet_search li.employee_types {
+    padding-left: 100px;
 }
 
 
-.timesheet_search ul.employeeType
-{
-  padding-left: 96px;
+.timesheet_search ul.employeeType {
+    padding-left: 96px;
 }
 
-.timesheet_search ul.employeeType li
-{
-  clear: none;
-  float: left;
-  width: 400px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 0px;
-}
+    .timesheet_search ul.employeeType li {
+        clear: none;
+        float: left;
+        width: 400px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        padding-left: 0px;
+    }
 
 
-.timesheet_search ul.employeeType li label
-{
-  display: block;
-  float: left;
-  margin-right: 10px;
-}
+        .timesheet_search ul.employeeType li label {
+            display: block;
+            float: left;
+            margin-right: 10px;
+        }
 
 
 
-.timesheet_search ul.employeeType li input
-{
-  display: block;
-  float: left;
-  width: 14px;
-  margin: none;
-  padding:none;
-  
-}
+        .timesheet_search ul.employeeType li input {
+            display: block;
+            float: left;
+            width: 14px;
+            margin: 0;
+            padding: 0;
+        }
 
 
 
-.timesheet_search li.active_employees span
-{
-  width: 1.5em;
-  margin-left: -2px;
-}
-.timesheet_search li.active_employees label, .timesheet_search li.employee_types label
-{
-  width: 400px;
-}
-.timesheet_search li span.statuses
-{
-  width: 500px;
-}
-.timesheet_search li span.statuses input
-{
-  float: left;
-}
-.timesheet_search li span.statuses td input
-{
-  float: left;
-}
-.timesheet_search li span.statuses label
-{
-  width: 15em;
-}
-.timesheet_search .action
-{
-  padding-left: 100px;
+.timesheet_search li.active_employees span {
+    width: 1.5em;
+    margin-left: -2px;
 }
 
-.person_list
-{
-  padding-top: 1em;
-}
-.person_list h2
-{
-  width: 25em;
-}
-.person_list table
-{
-  margin: 0;
+.timesheet_search li.active_employees label, .timesheet_search li.employee_types label {
+    width: 400px;
 }
 
-.AutoExtender
-{
-  border: solid 1px #006699;
-  line-height: 16px;
-  padding: 1px;
-  background-color: White;
+.timesheet_search li span.statuses {
+    width: 500px;
 }
 
-.AutoExtenderList
-{
-  border-bottom: dotted 1px #006699;
-  cursor: pointer;
-  color: #323760;
+    .timesheet_search li span.statuses input {
+        float: left;
+    }
+
+    .timesheet_search li span.statuses td input {
+        float: left;
+    }
+
+    .timesheet_search li span.statuses label {
+        width: 15em;
+    }
+
+.timesheet_search .action {
+    padding-left: 100px;
 }
 
-.AutoExtenderHighlight
-{
-  color: White;
-  background-color: #006699;
-  cursor: pointer;
+.person_list {
+    padding-top: 1em;
+}
+
+    .person_list h2 {
+        width: 25em;
+    }
+
+    .person_list table {
+        margin: 0;
+    }
+
+.AutoExtender {
+    border: solid 1px #006699;
+    line-height: 16px;
+    padding: 1px;
+    background-color: White;
+}
+
+.AutoExtenderList {
+    border-bottom: dotted 1px #006699;
+    cursor: pointer;
+    color: #323760;
+}
+
+.AutoExtenderHighlight {
+    color: White;
+    background-color: #006699;
+    cursor: pointer;
 }
 
 /*******************************************************************************************************/
@@ -1359,9 +1298,8 @@ table label
 /*******************************************************************************************************/
 /*TSActionLog.ascx******************************************************************************************************/
 /*******************************************************************************************************/
-.ts_actionlog
-{
-  padding-bottom: 30px;
+.ts_actionlog {
+    padding-bottom: 30px;
 }
 /*******************************************************************************************************/
 /*******************************************************************************************************/
@@ -1372,45 +1310,41 @@ table label
 /*******************************************************************************************************/
 /*WorkHours.aspx******************************************************************************************************/
 /*******************************************************************************************************/
-.enterworkhours
-{
-  padding-bottom: 2em;
-}
-.enterworkhours ol
-{
-  width: 25em;
-  margin: 0;
-}
-.enterworkhours ol li
-{
-  width: 30em;
+.enterworkhours {
+    padding-bottom: 2em;
 }
 
-.enterworkhours label
-{
-  width: 14em;
-}
-.enterworkhours .update
-{
-  padding-left: 161px;
-  width: 30em;
+    .enterworkhours ol {
+        width: 25em;
+        margin: 0;
+    }
+
+        .enterworkhours ol li {
+            width: 30em;
+        }
+
+    .enterworkhours label {
+        width: 14em;
+    }
+
+    .enterworkhours .update {
+        padding-left: 161px;
+        width: 30em;
+    }
+
+.workschedule_status {
+    width: 350px;
+    font-weight: bold;
+    padding: .5em .5em .5em .5em;
+    border: solid 1px #555555;
+    color: #000000;
+    background-color: #F5F6F6;
 }
 
-.workschedule_status
-{
-  width: 350px;
-  font-weight: bold;
-  padding: .5em .5em .5em .5em;
-  border: solid 1px #555555;
-  color: #555555;
-  background-color: #F5F6F6;
-}
-
-.workschedule_total
-{
-  display: block;
-  padding-left: 20em;
-  font-weight: bold;
+.workschedule_total {
+    display: block;
+    padding-left: 20em;
+    font-weight: bold;
 }
 
 /*******************************************************************************************************/
@@ -1421,29 +1355,27 @@ table label
 /*******************************************************************************************************/
 /*FileExport.aspx******************************************************************************************************/
 /*******************************************************************************************************/
-.file_export
-{
-  padding-bottom: 5em;
-}
-.file_export li label
-{
-  width: 7em;
-}
-.file_export li span.action
-{
-  padding-left: 7em;
+.file_export {
+    padding-bottom: 5em;
 }
 
+    .file_export li label {
+        width: 7em;
+    }
 
-.filetbl_title
-{
-  vertical-align: middle;
-  padding-bottom: 1.3em;
+    .file_export li span.action {
+        padding-left: 7em;
+    }
+
+
+.filetbl_title {
+    vertical-align: middle;
+    padding-bottom: 1.3em;
 }
-.export_note
-{
-  width: 350px;
-  padding-bottom: 1em;
+
+.export_note {
+    width: 350px;
+    padding-bottom: 1em;
 }
 /*******************************************************************************************************/
 /*******************************************************************************************************/
@@ -1453,9 +1385,8 @@ table label
 /*UpdateTimesheet.aspx******************************************************************************************************/
 /*******************************************************************************************************/
 
-.supervisor_note
-{
-  padding-bottom: 1em;
+.supervisor_note {
+    padding-bottom: 1em;
 }
 
 /*******************************************************************************************************/
@@ -1465,21 +1396,19 @@ table label
 
 
 
-.employee_details .employee_name
-{
-  font-size: 1.5em;
-  font-weight: bold;
+.employee_details .employee_name {
+    font-size: 1.5em;
+    font-weight: bold;
 }
 
-.work_schedule
-{
-  width: 300px;
-  float: left;
-  display: block;
+.work_schedule {
+    width: 300px;
+    float: left;
+    display: block;
 }
-.search_note
-{
-  padding-bottom: 1em;
+
+.search_note {
+    padding-bottom: 1em;
 }
 
 /*******************************************************************************************************/

@@ -13,14 +13,16 @@
    <asp:Repeater ID="rptActiveTimesheets" runat="server">
    <HeaderTemplate>
    <table class="tbl timesheetlist">
-    <tr>
-        <th class="pay_period">Pay Period</th>
-        <th>Job Title</th>
-        <th>Department</th>
-        <th>Supervisor</th>
-        <th class="pay_rate">Pay Rate</th>
-        <th>Status</th>
-    </tr>
+        <thead>
+            <tr>
+                <th class="pay_period">Pay Period</th>
+                <th>Job Title</th>
+                <th>Department</th>
+                <th>Supervisor</th>
+                <th class="pay_rate">Pay Rate</th>
+                <th>Status</th>
+            </tr>
+        </thead>
    </HeaderTemplate>
    <ItemTemplate>
     <tr>
@@ -45,27 +47,29 @@
     <asp:Repeater ID="rptJobList" runat="server">
     <HeaderTemplate>
     <table class="tbl joblist">
-    <tr>
-    <th class="job_number">#</th>
-    <th>Job Title</th>
-    <th>Department</th>
-    <th>Supervisor</th>
-    <th class="pay_rate">Pay Rate</th>
-    <th>Pay Period</th>
-    </tr>
+        <thead>
+            <tr>
+                <th class="job_number">#</th>
+                <th>Job Title</th>
+                <th>Department</th>
+                <th>Supervisor</th>
+                <th class="pay_rate">Pay Rate</th>
+                <th>Pay Period</th>
+            </tr>
+        </thead>
     </HeaderTemplate>
     <ItemTemplate>
     <tr>
     <td>
-        <input id="rdoJobNumber<%#Container.ItemIndex%>" type="radio" <asp:Literal ID="litJobChecked" runat="server" /> name="rdoJobNumber" value="<%#Container.ItemIndex%>" />
+        <input id="rdoJobNumber<%#Container.ItemIndex%>" type="radio" aria-label="Job Number" <asp:Literal ID="litJobChecked" runat="server" /> name="rdoJobNumber" value="<%#Container.ItemIndex%>" />
         
-        <asp:Label ID="lblJobNumber" runat="server" Visible="false" Text='<%#Container.DataItem("JobNumber")%>' />
+        <asp:Label ID="lblJobNumber" runat="server" Visible="false" for="rdoJobNumber<%#Container.ItemIndex%>" Text='<%#Container.DataItem("JobNumber")%>' />
     </td>
-    <td><label for="rdoJobNumber<%#Container.ItemIndex%>"><%#Container.DataItem("TitleShort")%></label></td>
-    <td><label for="rdoJobNumber<%#Container.ItemIndex%>"><%#Container.DataItem("DepartmentName")%></label></td>
-    <td><label for="rdoJobNumber<%#Container.ItemIndex%>"><%#Container.DataItem("Supervisor")%></label></td>
-    <td><label for="rdoJobNumber<%#Container.ItemIndex%>"><%#IIf(DataBinder.Eval(Container, "DataItem.PayRate") <> 0, String.Format("{0:C}", CDbl(Container.DataItem("PayRate"))), "<abbr title='Not Applicable'>N/A</abbr>")%></label></td>
-    <td><asp:DropDownList CssClass="field" ID="ddlPayPeriod" DataTextField="DisplayText" DataValueField="PayCycleID" runat="server" /></td>
+    <td><span><%#Container.DataItem("TitleShort")%></span></td>
+    <td><span><%#Container.DataItem("DepartmentName")%></span></td>
+    <td><span><%#Container.DataItem("Supervisor")%></span></td>
+    <td><span><%#IIf(DataBinder.Eval(Container, "DataItem.PayRate") <> 0, String.Format("{0:C}", CDbl(Container.DataItem("PayRate"))), "<abbr title='Not Applicable'>N/A</abbr>")%></span></td>
+    <td><asp:DropDownList CssClass="field" ID="ddlPayPeriod" DataTextField="DisplayText" DataValueField="PayCycleID" runat="server" aria-label="Pay Cycle" /></td>
     </tr>
     
         

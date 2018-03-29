@@ -54,47 +54,47 @@ Partial Public Class TS_FullTime
         ViewState("blnClickableGridMode") = False
         uclTSActionLog.TimesheetID = intTSID
 
-        Select Case intTimesheetStatusID
-          Case My.Settings.TimesheetStatus_InProcess
-            If blnIsOwner Or blnIsDelegated Then
-              'Owner Edit Mode
-              ViewState("blnClickableGridMode") = True
-              ViewState("blnEditableRemarkMode") = True
-              DisplayWorkHourMessage()
-              pnlEntryDetails.Visible = True
-              BindEditControls()
-              pnlSubmissionInterface.Visible = True
-              btnAddRemark.Visible = True
-              h2Remarks.Visible = True
-              txtOT_Convert.ReadOnly = False
-              txtOT_Pay.ReadOnly = False
-              pOT.Visible = True
-            End If
-          Case My.Settings.TimesheetStatus_AwaitingSupervisorApproval
-            If blnIsSupervisor Then
-              'Supervisor Edit Mode
-              'Setting to false so approvers can't preapprove leave.
-              ViewState("blnClickableGridMode") = False
-              ViewState("blnEditableRemarkMode") = True
-              pnlApprovalInterface.Visible = True
-              btnAddRemark.Visible = True
-              h2Remarks.Visible = True
-            End If
-          Case My.Settings.TimesheetStatus_SentToPayroll
-            If clsSession.userIsPayrollAdmin Then
-              ViewState("blnClickableGridMode") = False 'payroll doesn't need clickable links
-              ViewState("blnEditableRemarkMode") = True
-              pnlApprovalInterface.Visible = True
-              btnAddRemark.Visible = True
-              h2Remarks.Visible = True
-              btnApproveTimesheet.Text = "Mark as Processed"
-              spanApprove.Attributes.Add("onclick", "javascript:return confirm('Are you sure you want to mark this timesheet as processed?')")
-            End If
-          Case My.Settings.TimesheetStatus_ProcessedByPayroll
-            'View Mode
-        End Select
+                Select Case intTimesheetStatusID
+                    Case My.Settings.TimesheetStatus_InProcess
+                        If blnIsOwner Or blnIsDelegated Then
+                            'Owner Edit Mode
+                            ViewState("blnClickableGridMode") = True
+                            ViewState("blnEditableRemarkMode") = True
+                            DisplayWorkHourMessage()
+                            pnlEntryDetails.Visible = True
+                            BindEditControls()
+                            pnlSubmissionInterface.Visible = True
+                            btnAddRemark.Visible = True
+                            h2Remarks.Visible = True
+                            txtOT_Convert.ReadOnly = False
+                            txtOT_Pay.ReadOnly = False
+                            pOT.Visible = True
+                        End If
+                    Case My.Settings.TimesheetStatus_AwaitingSupervisorApproval
+                        If blnIsSupervisor Then
+                            'Supervisor Edit Mode
+                            'Setting to false so approvers can't preapprove leave.
+                            ViewState("blnClickableGridMode") = False
+                            ViewState("blnEditableRemarkMode") = True
+                            pnlApprovalInterface.Visible = True
+                            btnAddRemark.Visible = True
+                            h2Remarks.Visible = True
+                        End If
+                    Case My.Settings.TimesheetStatus_SentToPayroll
+                        If clsSession.userIsPayrollAdmin Then
+                            ViewState("blnClickableGridMode") = False 'payroll doesn't need clickable links
+                            ViewState("blnEditableRemarkMode") = True
+                            pnlApprovalInterface.Visible = True
+                            btnAddRemark.Visible = True
+                            h2Remarks.Visible = True
+                            btnApproveTimesheet.Text = "Mark as Processed"
+                            btnApproveTimesheet.OnClientClick = "return confirm('Are you sure you want to mark this timesheet as processed?');"
+                        End If
+                    Case My.Settings.TimesheetStatus_ProcessedByPayroll
+                        'View Mode
+                End Select
 
-        BindTimesheetHeader()
+                BindTimesheetHeader()
         BindTimesheetRemarks()
         BindTimesheetGrid()
         BindTimesheetTotals()

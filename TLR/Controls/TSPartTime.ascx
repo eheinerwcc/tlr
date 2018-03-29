@@ -115,6 +115,7 @@
         <label for="fsStartTime">Start Time:</label>
         <span>
         <fieldset title="Start time" id="fsStartTime">
+            <legend title="Start time">Start time</legend>
             <label for="<%=ddlStartHour.ClientID%>" class="invisible_label">Start hour:</label>
             <asp:DropDownList CssClass="field" ID="ddlStartHour" runat="server" OnChange="ToggleMealVisibility()" />
             <label for="<%=ddlStartMinute.ClientID%>" class="invisible_label">Start minute:</label>
@@ -131,7 +132,8 @@
     <li>
         <label for="fsEndTime">End Time:</label>
         <span>
-            <fieldset title="Start time" id="fsEndTime">
+            <fieldset title="End time" id="fsEndTime">
+                <legend title="End time">End time</legend>
             <label for="<%=ddlEndHour.ClientID%>" class="invisible_label">End hour:</label>
             <asp:DropDownList CssClass="field" ID="ddlEndHour" runat="server" OnChange="ToggleMealVisibility()" />
             <label for="<%=ddlEndMinute.ClientID%>" class="invisible_label">End minute:</label>
@@ -163,7 +165,7 @@
                 ddlEntryType.CssClass = "field hide"
             End If
         %>
-        <span><asp:DropDownList ID="ddlEntryType" runat="server" DataTextField="LeaveType" DataValueField="EntryTypeID" /></span>
+        <span><asp:DropDownList ID="ddlEntryType" runat="server" DataTextField="LeaveType" DataValueField="EntryTypeID" aria-label="Entry type" /></span>
     </li>
     <li>
         <span class="update">
@@ -184,12 +186,14 @@
   <asp:Repeater ID="rptTimesheetTotals" runat="server">
        <HeaderTemplate>
         <table class="tbl" title="Timesheet totals and leave balance">
-            <tr>
-                <th><abbr title="Leave type">Type</abbr></th>
-                <th><abbr title="Available balance">Avail Bal</abbr></th>
-                <th>Reported</th>
-                <th><abbr title="Estimated ending balance">Est New Bal</abbr></th>
-            </tr>
+            <thead>
+                <tr>
+                    <th><abbr title="Leave type">Type</abbr></th>
+                    <th><abbr title="Available balance">Avail Bal</abbr></th>
+                    <th>Reported</th>
+                    <th><abbr title="Estimated ending balance">Est New Bal</abbr></th>
+                </tr>
+            </thead>
        </HeaderTemplate>
        <ItemTemplate>
             <tr>
@@ -242,16 +246,14 @@
                     <td class="start_time<%#IIf(Not IsDBNull(Container.DataItem("EntryTypeID")), " leave", "")%><%#IIf(Container.DataItem("InPayPeriod")=0," inactive","") %><%#IIf(Container.DataItem("SpecialDay")=true," holiday","") %>"><%#Container.DataItem("EntryStartTime")%>
                     </td>   
                     <td class="end_time<%#IIf(Not IsDBNull(Container.DataItem("EntryTypeID")), " leave", "")%><%#IIf(Container.DataItem("InPayPeriod")=0," inactive","") %><%#IIf(Container.DataItem("SpecialDay")=true," holiday","") %>"><%#Container.DataItem("EntryEndTime")%></td>
-                    <td class="meal_time<%#IIf(Not IsDBNull(Container.DataItem("EntryTypeID")), " leave", "")%><%#IIf(Container.DataItem("InPayPeriod")=0," inactive","") %><%#IIf(Container.DataItem("SpecialDay")=true," holiday","") %>"><%#IIf(Container.DataItem("MealBreak") > 0, Container.DataItem("MealBreak") & " <aabr title='minutes'>mins</aabr>", "")%></td>
+                    <td class="meal_time<%#IIf(Not IsDBNull(Container.DataItem("EntryTypeID")), " leave", "")%><%#IIf(Container.DataItem("InPayPeriod")=0," inactive","") %><%#IIf(Container.DataItem("SpecialDay")=true," holiday","") %>"><%#IIf(Container.DataItem("MealBreak") > 0, Container.DataItem("MealBreak") & " <abbr title='minutes'>mins</abbr>", "")%></td>
                     <td class="total_time<%#IIf(Not IsDBNull(Container.DataItem("EntryTypeID")), " leave", "")%><%#IIf(Container.DataItem("InPayPeriod")=0," inactive","") %><%#IIf(Container.DataItem("SpecialDay")=true," holiday","") %>">
-                        <%#IIf(Container.DataItem("TotalMinutes") > 0, Math.Floor(Container.DataItem("TotalMinutes") / 60) & " <abbr title='hours'>hrs</abbr>", "")%> <%#IIf((Container.DataItem("TotalMinutes") Mod 60) > 0, Container.DataItem("TotalMinutes") Mod 60 & " <aabr title='minutes'>mins</aabr>", "")%>
+                        <%#IIf(Container.DataItem("TotalMinutes") > 0, Math.Floor(Container.DataItem("TotalMinutes") / 60) & " <abbr title='hours'>hrs</abbr>", "")%> <%#IIf((Container.DataItem("TotalMinutes") Mod 60) > 0, Container.DataItem("TotalMinutes") Mod 60 & " <abbr title='minutes'>mins</abbr>", "")%>
                         <span runat="server" visible='<%#viewstate("dsBudgets") isnot nothing and Container.DataItem("TotalMinutes") > 0 and Container.DataItem("TotalMinutes") mod 60 <> 0%>'>(<%#Format(Container.DataItem("TotalMinutes") / 60, "#.##")%> <abbr title="hours">hrs</abbr>)</span>
                     </td>
                     <td class="<%#IIf(Not IsDBNull(Container.DataItem("EntryTypeID")), " leave", "")%><%#IIf(Container.DataItem("InPayPeriod")=0," inactive","") %><%#IIf(Container.DataItem("SpecialDay")=true," holiday","") %>">
                         <asp:Button ID="btnEdit" Text="Edit" CssClass="link" runat="server" Visible='<%#IIf(Container.DataItem("TotalMinutes") > 0 and ViewState("blnClickableGridMode") and TLR.clsGeneric.DeNull(Container.DataItem("SID")) = TLR.clsSession.userSID, true, false) %>' CommandArgument='<%#Container.DataItem("TimesheetEntryID")%>' OnClick="EditEntry" /> 
-                        <span onclick="javascript:return confirm('Are you sure you want to delete this entry?')">
-                            <asp:Button ID="btnDelete" Text="Delete" CssClass="link" runat="server" Visible='<%#IIf(Container.DataItem("TotalMinutes") > 0 and ViewState("blnClickableGridMode") and TLR.clsGeneric.DeNull(Container.DataItem("SID")) = TLR.clsSession.userSID, true, false) %>' CommandArgument='<%#Container.DataItem("TimesheetEntryID")%>' OnClick="DeleteEntry" />
-                        </span>
+                        <asp:Button ID="btnDelete" Text="Delete" CssClass="link" runat="server" OnClientClick="return confirm('Are you sure you want to delete this entry?');" Visible='<%#IIf(Container.DataItem("TotalMinutes") > 0 and ViewState("blnClickableGridMode") and TLR.clsGeneric.DeNull(Container.DataItem("SID")) = TLR.clsSession.userSID, true, false) %>' CommandArgument='<%#Container.DataItem("TimesheetEntryID")%>' OnClick="DeleteEntry" />
                         
                         
                         <asp:Repeater ID="rptBudgetAllocationPerEntryDisplay" runat="server" DataSource='<%# iif(DataBinder.Eval(Container, "DataItem.Budgets") <> "", DataBinder.Eval(Container, "DataItem.Budgets").ToString.Split(";"), nothing) %>'>
@@ -312,43 +314,43 @@
     </asp:Repeater>
     <tfoot>
         <tr>
-            <th class="total_hours" scope="row"><abbr title="Regular hours worked this week (up to 40 hours)">Regular Hrs:</abbr></td>
+            <th class="total_hours" scope="row" id="regular_hours<%#Container.ItemIndex%>"><abbr title="Regular hours worked this week (up to 40 hours)">Regular Hrs:</abbr></th>
             <td class="total_hours"></td>
             <td class="total_hours"></td>
             <td class="total_hours"></td>
-            <td class="total_hours value" headers="total_hours">
-                <%#IIf((Container.DataItem("TotalMinutes") - Container.DataItem("TotalLeaveMinutes")) >= 2400, "40", Math.Floor((Container.DataItem("TotalMinutes") - Container.DataItem("TotalLeaveMinutes")) / 60))%> <abbr title="hours">hrs</abbr> <%#IIf((Container.DataItem("TotalMinutes") - Container.DataItem("TotalLeaveMinutes")) > 2400, "0", Math.Floor((Container.DataItem("TotalMinutes") - Container.DataItem("TotalLeaveMinutes")) Mod 60))%> <aabr title="minutes">mins</aabr>
+            <td class="total_hours value" headers="regular_hours<%#Container.ItemIndex%>">
+                <%#IIf((Container.DataItem("TotalMinutes") - Container.DataItem("TotalLeaveMinutes")) >= 2400, "40", Math.Floor((Container.DataItem("TotalMinutes") - Container.DataItem("TotalLeaveMinutes")) / 60))%> <abbr title="hours">hrs</abbr> <%#IIf((Container.DataItem("TotalMinutes") - Container.DataItem("TotalLeaveMinutes")) > 2400, "0", Math.Floor((Container.DataItem("TotalMinutes") - Container.DataItem("TotalLeaveMinutes")) Mod 60))%> <abbr title="minutes">mins</abbr>
             </td>
             <td class="total_hours"></td>
         </tr>
         <tr id="rowTotalLeaveHours" runat="server" visible="false">
-            <th class="total_hours" scope="row"><abbr title="Leave hours reported this week">Leave Hrs:</abbr></th>
+            <th class="total_hours" scope="row" id="total_leave_hours_week"><abbr title="Leave hours reported this week">Leave Hrs:</abbr></th>
             <td class="total_hours"></td>
             <td class="total_hours"></td>
             <td class="total_hours"></td>
-            <td class="total_hours value" headers="total_hours">
-                <%#Math.Floor(Container.DataItem("TotalLeaveMinutes") / 60)%> <abbr title="hours">hrs</abbr> <%#Math.Floor(Container.DataItem("TotalLeaveMinutes") Mod 60)%> <aabr title="minutes">mins</aabr>
+            <td class="total_hours value" headers="total_leave_hours_week">
+                <%#Math.Floor(Container.DataItem("TotalLeaveMinutes") / 60)%> <abbr title="hours">hrs</abbr> <%#Math.Floor(Container.DataItem("TotalLeaveMinutes") Mod 60)%> <abbr title="minutes">mins</abbr>
             </td>
             <td class="total_hours"></td>
         </tr>
         <tr>
-            <th class="total_hours" scope="row"><abbr title="Total hours worked this week between all jobs">This week:</abbr></td>
+            <th class="total_hours" scope="row" id="total_hours_week_all<%#Container.ItemIndex%>"><abbr title="Total hours worked this week between all jobs">This week:</abbr></th>
             <td class="total_hours"></td>
             <td class="total_hours"></td>
             <td class="total_hours"></td>
-            <td class="total_hours" headers="total_hours value">
-                <%#Math.Floor(Container.DataItem("TotalWeekMinutes") / 60)%> <abbr title="hours">hrs</abbr> <%#Math.Floor(Container.DataItem("TotalWeekMinutes") Mod 60)%> <aabr title="minutes">mins</aabr>
+            <td class="total_hours" headers="total_hours_week_all<%#Container.ItemIndex%>">
+                <%#Math.Floor(Container.DataItem("TotalWeekMinutes") / 60)%> <abbr title="hours">hrs</abbr> <%#Math.Floor(Container.DataItem("TotalWeekMinutes") Mod 60)%> <abbr title="minutes">mins</abbr>
             </td>
             <td class="total_hours"></td>
         </tr>            
         <tr>
-            <th class="total_hours" scope="row"><abbr title="Total overtime hours">Overtime:</abbr></td>
+            <th class="total_hours" scope="row" id="total_hours_overtime<%#Container.ItemIndex%>"><abbr title="Total overtime hours">Overtime:</abbr></th>
             <td class="total_hours"></td>
             <td class="total_hours"></td>
             <td class="total_hours"></td>
-            <td class="total_hours value" headers="overtime">
+            <td class="total_hours value" headers="total_hours_overtime<%#Container.ItemIndex%>">
                 <%#IIf(Container.DataItem("TotalWeekMinutes") > 2400, Math.Floor((Container.DataItem("TotalWeekMinutes") - 2400) / 60), "0")%> <abbr title="hours">hrs</abbr>
-                <%#IIf(Container.DataItem("TotalWeekMinutes") > 2400, Math.Floor((Container.DataItem("TotalWeekMinutes") - 2400) Mod 60), "0")%> <aabr title="minutes">mins</aabr>
+                <%#IIf(Container.DataItem("TotalWeekMinutes") > 2400, Math.Floor((Container.DataItem("TotalWeekMinutes") - 2400) Mod 60), "0")%> <abbr title="minutes">mins</abbr>
             </td>
             <td class="total_hours"></td>
         </tr>        
@@ -371,11 +373,13 @@ Grand Total: <asp:Label CssClass="totalhours" ID="lblGrandTotalHours" runat="ser
 <asp:Repeater ID="rptRemarks" runat="server">
 <HeaderTemplate>
     <table>
-    <tr>
-        <th id="remarkText">Remark Text</th>
-        <th>Author/Date</th>
-        <th>Action</th>
-    </tr>
+        <thead>
+            <tr>
+                <th id="remarkText">Remark Text</th>
+                <th>Author/Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
 </HeaderTemplate>
 <FooterTemplate>
     </table>
@@ -386,9 +390,7 @@ Grand Total: <asp:Label CssClass="totalhours" ID="lblGrandTotalHours" runat="ser
         <td class="author_date"><%#Container.DataItem("DisplayName")%><br /><%#Format(Container.DataItem("LastUpdatedDate"), "g")%></td>
         <td class="action">
             <asp:Button ID="btnEditRemark" Text="Edit" CssClass="link edit" runat="server" CommandArgument='<%#Container.DataItem("TimesheetRemarkID")%>' OnClick="EditRemark" Visible='<%#IIf(Container.DataItem("SID") = TLR.clsSession.UserSID and ViewState("blnEditableRemarkMode"), true, false) %>' />                    
-            <span onclick="javascript:return confirm('Are you sure you want to delete this remark?')">
-                <asp:Button ID="btnDeleteRemark" Text="Delete" CssClass="link" runat="server" CommandArgument='<%#Container.DataItem("TimesheetRemarkID")%>' OnClick="DeleteRemark" Visible='<%#IIf(Container.DataItem("SID") = TLR.clsSession.UserSID and ViewState("blnEditableRemarkMode"), true, false) %>' />
-            </span>            
+            <asp:Button ID="btnDeleteRemark" Text="Delete" CssClass="link" runat="server" OnClientClick="return confirm('Are you sure you want to delete this remark?');" CommandArgument='<%#Container.DataItem("TimesheetRemarkID")%>' OnClick="DeleteRemark" Visible='<%#IIf(Container.DataItem("SID") = TLR.clsSession.UserSID and ViewState("blnEditableRemarkMode"), true, false) %>' />
         </td>
     </tr>
 </ItemTemplate>
@@ -427,11 +429,13 @@ Grand Total: <asp:Label CssClass="totalhours" ID="lblGrandTotalHours" runat="ser
     <asp:Repeater ID="rptBudgetAllocationSelection" runat="server">
        <HeaderTemplate>
         <table class="tbl">
-            <tr>
-                <th>Budget #</th>
-                <th>Earning Type</th>
-                <th>Allocation</th>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Budget #</th>
+                    <th>Earning Type</th>
+                    <th>Allocation</th>
+                </tr>
+            </thead>
        </HeaderTemplate>
        <ItemTemplate>
             <tr>
@@ -453,25 +457,17 @@ Grand Total: <asp:Label CssClass="totalhours" ID="lblGrandTotalHours" runat="ser
 <!--*********************************************************************************************-->
 <asp:Panel ID="pnlSubmissionInterface" class="ts_action_panel" runat="server" Visible="false">
 
-<span onclick="javascript:return confirm('Are you sure you want to submit this timesheet to your supervisor for approval?');">
-<asp:Button ID="btnSubmitTimesheet" CssClass="button_important" Text="Submit Timesheet" runat="server" />
-</span>
-<span onclick="javascript:return confirm('Are you sure you want DELETE this timesheet?')">
-<asp:Button ID="btnDeleteTimesheet" CssClass="button" Text="Delete Timesheet" runat="server" />
-</span>
+<asp:Button ID="btnSubmitTimesheet" OnClientClick="return confirm('Are you sure you want to submit this timesheet to your supervisor for approval?');" CssClass="button_important" Text="Submit Timesheet" runat="server" />
+<asp:Button ID="btnDeleteTimesheet" OnClientClick="return confirm('Are you sure you want DELETE this timesheet?');" CssClass="button" Text="Delete Timesheet" runat="server" />
 </asp:Panel>
 <!--*********************************************************************************************-->
 
 <!--Approval interface-->
 <!--*********************************************************************************************-->
 <asp:Panel ID="pnlApprovalInterface" class="ts_action_panel" runat="server" Visible="false">
-<span runat="server" id="spanApprove"  onclick="javascript:return confirm('Are you sure you want to approve this timesheet?')">
-<asp:Button ID="btnApproveTimesheet" CssClass="button_important" Text="Approve Timesheet" runat="server" />
-</span>
-<span onclick="javascript:return confirm('Are you sure you want REJECT this timesheet?')">
-<asp:Button ID="btnRejectTimesheet" CssClass="button" Text="Reject" runat="server" />
-</span>
-<label for"<%=txtComment.ClientID%>">Comment:</label>
+<asp:Button ID="btnApproveTimesheet" CssClass="button_important" Text="Approve Timesheet" runat="server" OnClientClick="return confirm('Are you sure you want to approve this timesheet?');" />
+<asp:Button ID="btnRejectTimesheet" CssClass="button" Text="Reject" runat="server" OnClientClick="return confirm('Are you sure you want REJECT this timesheet?');" />
+<label for="<%=txtComment.ClientID%>">Comment:</label>
 &nbsp;<asp:TextBox ID="txtComment" CssClass="comment" TextMode="MultiLine" runat="server" />
 </asp:Panel>
 <!--*********************************************************************************************-->

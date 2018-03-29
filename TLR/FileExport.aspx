@@ -24,9 +24,7 @@ All other timesheets will have to be processed manually.
 </li>
 <li>
     <span class="action">
-        <span onclick="javascript:return confirm('Are you sure you want to generate the upload file at this time?')">
-            <asp:Button ID="btnGenerateFile" runat="server" CssClass="button" text="Generate File" />
-        </span>
+        <asp:Button ID="btnGenerateFile" runat="server" CssClass="button" text="Generate File" OnClientClick="return confirm('Are you sure you want to generate the upload file at this time?');" />
      </span>
 </li>
 </ol>
@@ -42,11 +40,13 @@ All other timesheets will have to be processed manually.
     <asp:Repeater ID="rptExportedFileByYear" runat="server">
     <HeaderTemplate>
         <table class="tbl">
-        <tr>
-            <th><strong>Filename</strong></th>
-            <th><strong>Date</strong></th>
-            <th><strong>Created By</strong></th>
-        </tr>
+            <thead>
+                <tr>
+                    <th><strong>Filename</strong></th>
+                    <th><strong>Date</strong></th>
+                    <th><strong>Created By</strong></th>
+                </tr>
+            </thead>
     </HeaderTemplate>
     <ItemTemplate>
         <tr>

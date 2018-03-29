@@ -71,9 +71,7 @@
 				<td><%#Format(DataBinder.Eval(Container, "DataItem.OneDay"), "d")%> (<%#WeekdayName(DataBinder.Eval(Container, "DataItem.DayOfWeek"), True)%>.)</td>
 				<td><%#DataBinder.Eval(Container, "DataItem.Description") %></td>
 				<td>
-				    <span onclick="javascript:return confirm('Are you sure you want to delete this entry?')">
-					    <asp:Button ID="btnDelete" runat="server" Text="Delete"	onclick="DeleteEntry" CommandArgument='<%#DataBinder.Eval(Container, "DataItem.OneDay") %>' CssClass="button"/>
-					</span>
+					<asp:Button ID="btnDelete" runat="server" Text="Delete"	onclick="DeleteEntry" OnClientClick="return confirm('Are you sure you want to delete this entry?');" CommandArgument='<%#DataBinder.Eval(Container, "DataItem.OneDay") %>' CssClass="button"/>
 				</td>
 			</tr>
 	</ItemTemplate>

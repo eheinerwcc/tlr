@@ -9,11 +9,13 @@
   <asp:Repeater ID="rptLeaveBalance" runat="server">
    <HeaderTemplate>
    <table class="tbl">
-    <tr>
-        <th id="leavetype">Leave Type</th>
-        <th id="balance">Balance</th>
-        <th id="accrualrate">Accrual Rate</th>
-    </tr>
+       <thead>
+            <tr>
+                <th id="leavetype">Leave Type</th>
+                <th id="balance">Balance</th>
+                <th id="accrualrate">Accrual Rate</th>
+            </tr>
+       </thead>
    </HeaderTemplate>
    <ItemTemplate>
     <tr>

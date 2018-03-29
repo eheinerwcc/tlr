@@ -9,13 +9,15 @@
    <asp:Repeater ID="rptPrimaryApproval" runat="server">
    <HeaderTemplate>
    <table class="timesheetlist">
-    <tr>
-        <th>Pay Period</th>
-        <th>Name</th>
-        <th>Title</th>
-        <th>Department</th>
-        <th>Status</th>
-    </tr>
+       <thead>
+            <tr>
+                <th>Pay Period</th>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Department</th>
+                <th>Status</th>
+            </tr>
+       </thead>
    </HeaderTemplate>
    <ItemTemplate>
     <tr>
@@ -40,13 +42,15 @@
    <asp:Repeater ID="rptAlternateApproval" runat="server">
    <HeaderTemplate>
    <table class="timesheetlist">
-    <tr>
-         <th>Pay Period</th>
-        <th>Name</th>
-        <th>Title</th>
-        <th>Department</th>
-        <th>Status</th>
-    </tr>
+       <thead>
+            <tr>
+                <th>Pay Period</th>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Department</th>
+                <th>Status</th>
+            </tr>
+       </thead>
    </HeaderTemplate>
    <ItemTemplate>
     <tr>

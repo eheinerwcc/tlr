@@ -91,7 +91,7 @@ Partial Public Class TS_PartTime
                             btnAddRemark.Visible = True
                             h2Remarks.Visible = True
                             btnApproveTimesheet.Text = "Mark as Processed"
-                            spanApprove.Attributes.Add("onclick", "javascript:return confirm('Are you sure you want to mark this timesheet as processed?')")
+                            btnApproveTimesheet.OnClientClick = "return confirm('Are you sure you want to mark this timesheet as processed?')"
                         End If
                     Case My.Settings.TimesheetStatus_ProcessedByPayroll
                         'View Mode
@@ -264,7 +264,7 @@ Partial Public Class TS_PartTime
 
         ViewState("TotalTimesheetMinutes") = intTimesheetTotalMinutes.ToString
         ViewState("TotalTimesheetLeaveMinutes") = intTimesheetLeaveMinutes.ToString
-        lblGrandTotalHours.Text = IIf(ViewState("TotalTimesheetMinutes") > 0, Math.Floor(ViewState("TotalTimesheetMinutes") / 60) & " <aabr title='hours'>hrs</aabr> ", "") + IIf((ViewState("TotalTimesheetMinutes") Mod 60) > 0, ViewState("TotalTimesheetMinutes") Mod 60 & " <aabr title='minutes'>mins</aabr>", "") 'ViewState("TotalTimesheetMinutes")
+        lblGrandTotalHours.Text = IIf(ViewState("TotalTimesheetMinutes") > 0, Math.Floor(ViewState("TotalTimesheetMinutes") / 60) & " <abbr title='hours'>hrs</abbr> ", "") + IIf((ViewState("TotalTimesheetMinutes") Mod 60) > 0, ViewState("TotalTimesheetMinutes") Mod 60 & " <abbr title='minutes'>mins</abbr>", "") 'ViewState("TotalTimesheetMinutes")
         lblBudgetAllocationTotalHours.Text = ViewState("TotalTimesheetMinutes") / 60
 
     End Sub
@@ -298,6 +298,7 @@ Partial Public Class TS_PartTime
                 tr.Visible = True
             End If
         End If
+
     End Sub
 
     Private Sub BindTimesheetRemarks()

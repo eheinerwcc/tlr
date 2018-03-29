@@ -12,7 +12,7 @@ Option Explicit On
 
 
 Partial Public Class TS_PartTime
-
+    
     '''<summary>
     '''uclFeedback control.
     '''</summary>
@@ -21,7 +21,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents uclFeedback As Global.TLR.Feedback
-
+    
     '''<summary>
     '''lblTSPeriod control.
     '''</summary>
@@ -30,7 +30,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblTSPeriod As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lblDelegationInfo control.
     '''</summary>
@@ -39,7 +39,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblDelegationInfo As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''pnlTSDetails control.
     '''</summary>
@@ -48,7 +48,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents pnlTSDetails As Global.System.Web.UI.WebControls.Panel
-
+    
     '''<summary>
     '''litTSDetails control.
     '''</summary>
@@ -57,7 +57,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents litTSDetails As Global.System.Web.UI.WebControls.Literal
-
+    
     '''<summary>
     '''lblStatus control.
     '''</summary>
@@ -66,7 +66,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblStatus As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lblName control.
     '''</summary>
@@ -75,7 +75,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblName As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lblSupervisor control.
     '''</summary>
@@ -84,7 +84,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblSupervisor As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lblJobTitle control.
     '''</summary>
@@ -93,7 +93,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblJobTitle As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lblPayRate control.
     '''</summary>
@@ -102,7 +102,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblPayRate As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lblBudget control.
     '''</summary>
@@ -111,7 +111,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblBudget As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lblDueDate control.
     '''</summary>
@@ -120,7 +120,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblDueDate As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''liUpdateTimesheet control.
     '''</summary>
@@ -129,7 +129,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents liUpdateTimesheet As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
+    
     '''<summary>
     '''pnlEntryDetails control.
     '''</summary>
@@ -138,7 +138,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents pnlEntryDetails As Global.System.Web.UI.WebControls.Panel
-
+    
     '''<summary>
     '''litHeader control.
     '''</summary>
@@ -147,7 +147,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents litHeader As Global.System.Web.UI.WebControls.Literal
-
+    
     '''<summary>
     '''ddlDate control.
     '''</summary>
@@ -156,7 +156,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ddlDate As Global.System.Web.UI.WebControls.DropDownList
-
+    
     '''<summary>
     '''ddlStartHour control.
     '''</summary>
@@ -165,7 +165,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ddlStartHour As Global.System.Web.UI.WebControls.DropDownList
-
+    
     '''<summary>
     '''ddlStartMinute control.
     '''</summary>
@@ -174,7 +174,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ddlStartMinute As Global.System.Web.UI.WebControls.DropDownList
-
+    
     '''<summary>
     '''ddlStartAMPM control.
     '''</summary>
@@ -183,7 +183,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ddlStartAMPM As Global.System.Web.UI.WebControls.DropDownList
-
+    
     '''<summary>
     '''ddlEndHour control.
     '''</summary>
@@ -192,7 +192,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ddlEndHour As Global.System.Web.UI.WebControls.DropDownList
-
+    
     '''<summary>
     '''ddlEndMinute control.
     '''</summary>
@@ -201,7 +201,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ddlEndMinute As Global.System.Web.UI.WebControls.DropDownList
-
+    
     '''<summary>
     '''ddlEndAMPM control.
     '''</summary>
@@ -210,7 +210,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ddlEndAMPM As Global.System.Web.UI.WebControls.DropDownList
-
+    
     '''<summary>
     '''ddlMealTime control.
     '''</summary>
@@ -219,7 +219,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ddlMealTime As Global.System.Web.UI.WebControls.DropDownList
-
+    
     '''<summary>
     '''liEntryType control.
     '''</summary>
@@ -228,7 +228,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents liEntryType As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
+    
     '''<summary>
     '''chkbxEnterType control.
     '''</summary>
@@ -237,7 +237,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents chkbxEnterType As Global.System.Web.UI.WebControls.CheckBox
-
+    
     '''<summary>
     '''ddlEntryType control.
     '''</summary>
@@ -246,7 +246,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ddlEntryType As Global.System.Web.UI.WebControls.DropDownList
-
+    
     '''<summary>
     '''btnAddEntry control.
     '''</summary>
@@ -255,7 +255,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnAddEntry As Global.System.Web.UI.WebControls.Button
-
+    
     '''<summary>
     '''btnUpdateEntry control.
     '''</summary>
@@ -264,7 +264,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnUpdateEntry As Global.System.Web.UI.WebControls.Button
-
+    
     '''<summary>
     '''btnDeleteEntry control.
     '''</summary>
@@ -273,7 +273,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnDeleteEntry As Global.System.Web.UI.WebControls.Button
-
+    
     '''<summary>
     '''btnCancelUpdate control.
     '''</summary>
@@ -282,7 +282,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnCancelUpdate As Global.System.Web.UI.WebControls.Button
-
+    
     '''<summary>
     '''pnlTimesheetTotals control.
     '''</summary>
@@ -291,7 +291,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents pnlTimesheetTotals As Global.System.Web.UI.WebControls.Panel
-
+    
     '''<summary>
     '''rptTimesheetTotals control.
     '''</summary>
@@ -300,7 +300,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents rptTimesheetTotals As Global.System.Web.UI.WebControls.Repeater
-
+    
     '''<summary>
     '''ddlBudgetAllocationSplitTypePerEntry control.
     '''</summary>
@@ -309,7 +309,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ddlBudgetAllocationSplitTypePerEntry As Global.System.Web.UI.WebControls.DropDownList
-
+    
     '''<summary>
     '''rptWeeks control.
     '''</summary>
@@ -318,7 +318,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents rptWeeks As Global.System.Web.UI.WebControls.Repeater
-
+    
     '''<summary>
     '''lblGrandTotalHours control.
     '''</summary>
@@ -327,7 +327,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblGrandTotalHours As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lblLeaveTotalHours control.
     '''</summary>
@@ -336,7 +336,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblLeaveTotalHours As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''h2Remarks control.
     '''</summary>
@@ -345,7 +345,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents h2Remarks As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
+    
     '''<summary>
     '''rptRemarks control.
     '''</summary>
@@ -354,7 +354,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents rptRemarks As Global.System.Web.UI.WebControls.Repeater
-
+    
     '''<summary>
     '''btnAddRemark control.
     '''</summary>
@@ -363,7 +363,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnAddRemark As Global.System.Web.UI.WebControls.Button
-
+    
     '''<summary>
     '''pnlEditRemark control.
     '''</summary>
@@ -372,7 +372,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents pnlEditRemark As Global.System.Web.UI.WebControls.Panel
-
+    
     '''<summary>
     '''txtRemark control.
     '''</summary>
@@ -381,7 +381,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtRemark As Global.System.Web.UI.WebControls.TextBox
-
+    
     '''<summary>
     '''btnSaveRemark control.
     '''</summary>
@@ -390,7 +390,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnSaveRemark As Global.System.Web.UI.WebControls.Button
-
+    
     '''<summary>
     '''btnCancelRemarkUpdate control.
     '''</summary>
@@ -399,7 +399,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnCancelRemarkUpdate As Global.System.Web.UI.WebControls.Button
-
+    
     '''<summary>
     '''pnlBudgetAllocation control.
     '''</summary>
@@ -408,7 +408,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents pnlBudgetAllocation As Global.System.Web.UI.WebControls.Panel
-
+    
     '''<summary>
     '''lblBudgetAllocationTotalHours control.
     '''</summary>
@@ -417,7 +417,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblBudgetAllocationTotalHours As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''lblLeaveWarning control.
     '''</summary>
@@ -426,7 +426,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblLeaveWarning As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''fsSplitBudgets control.
     '''</summary>
@@ -435,7 +435,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents fsSplitBudgets As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
+    
     '''<summary>
     '''ddlBudgetAllocationSplitType control.
     '''</summary>
@@ -444,7 +444,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents ddlBudgetAllocationSplitType As Global.System.Web.UI.WebControls.DropDownList
-
+    
     '''<summary>
     '''lblBudgetSplit control.
     '''</summary>
@@ -453,7 +453,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblBudgetSplit As Global.System.Web.UI.WebControls.Label
-
+    
     '''<summary>
     '''rptBudgetAllocationSelection control.
     '''</summary>
@@ -462,7 +462,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents rptBudgetAllocationSelection As Global.System.Web.UI.WebControls.Repeater
-
+    
     '''<summary>
     '''pnlSubmissionInterface control.
     '''</summary>
@@ -471,7 +471,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents pnlSubmissionInterface As Global.System.Web.UI.WebControls.Panel
-
+    
     '''<summary>
     '''btnSubmitTimesheet control.
     '''</summary>
@@ -480,7 +480,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnSubmitTimesheet As Global.System.Web.UI.WebControls.Button
-
+    
     '''<summary>
     '''btnDeleteTimesheet control.
     '''</summary>
@@ -489,7 +489,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnDeleteTimesheet As Global.System.Web.UI.WebControls.Button
-
+    
     '''<summary>
     '''pnlApprovalInterface control.
     '''</summary>
@@ -498,16 +498,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents pnlApprovalInterface As Global.System.Web.UI.WebControls.Panel
-
-    '''<summary>
-    '''spanApprove control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents spanApprove As Global.System.Web.UI.HtmlControls.HtmlGenericControl
-
+    
     '''<summary>
     '''btnApproveTimesheet control.
     '''</summary>
@@ -516,7 +507,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnApproveTimesheet As Global.System.Web.UI.WebControls.Button
-
+    
     '''<summary>
     '''btnRejectTimesheet control.
     '''</summary>
@@ -525,7 +516,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents btnRejectTimesheet As Global.System.Web.UI.WebControls.Button
-
+    
     '''<summary>
     '''txtComment control.
     '''</summary>
@@ -534,7 +525,7 @@ Partial Public Class TS_PartTime
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtComment As Global.System.Web.UI.WebControls.TextBox
-
+    
     '''<summary>
     '''uclTSActionLog control.
     '''</summary>

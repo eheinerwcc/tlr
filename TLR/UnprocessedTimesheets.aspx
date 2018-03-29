@@ -11,14 +11,16 @@
    <asp:Repeater ID="rptTimesheets" runat="server">
    <HeaderTemplate>
    <table class="timesheetlist">
-    <tr>
-        <th class="pay_period">Pay Period</th>
-        <th>Name</th>
-        <th>Title</th>
-        <th>Department</th>
-        <th>Supervisor</th>
-        <th>Type</th>
-    </tr>
+       <thead>
+            <tr>
+                <th class="pay_period">Pay Period</th>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Department</th>
+                <th>Supervisor</th>
+                <th>Type</th>
+            </tr>
+       </thead>
    </HeaderTemplate>
    <ItemTemplate>
     <tr>

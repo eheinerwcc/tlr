@@ -37,13 +37,13 @@
         <label for="<%=chkActiveEmployeesOnly.ClientID%>">Search active employees only</label>
     </li>   
     <li>
-        <label for="<%=rptEmployeeTypes.ClientID%>">Employee Type:</label>
+        <label for="rptEmployeeTypeList">Employee Type:</label>
         
 
         
         <asp:Repeater ID="rptEmployeeTypes" runat="server">
          <HeaderTemplate>
-          <ul class="employeeType">
+          <ul class="employeeType" id="rptEmployeeTypeList">
          </HeaderTemplate>
          <ItemTemplate>
           <li>
@@ -69,7 +69,7 @@
         <label for="<%=txtStartDate.ClientID%>">Start Date:</label>
         <span>
 			<asp:TextBox ID="txtStartDate" CssClass="Form_Field" Width="80" autocomplete="off" MaxLength="10" runat="Server" />
-			<asp:ImageButton ID="imgCalStartDate" runat="server" AlternateText="Click to select date" ImageUrl="~/images/Control_MonthCalendar.gif"/>
+			<asp:ImageButton ID="imgCalStartDate" runat="server" AlternateText="Click to select start date" ImageUrl="~/images/Control_MonthCalendar.gif"/>
 			<TLR:CalendarExtender TargetControlID="txtStartDate" ID="calStartDate" PopupButtonID="imgCalStartDate" runat="server"/> (m/d/yyyy)
         </span>
     </li>
@@ -77,20 +77,20 @@
         <label for="<%=txtEndDate.ClientID%>">End Date:</label>
         <span>
 		    <asp:TextBox ID="txtEndDate" CssClass="Form_Field" Width="80" AutoComplete="off" MaxLength="10" runat="SERVER" />
-		    <asp:ImageButton ID="imgEndDate" runat="server" AlternateText="Click to select date" ImageUrl="~/images/Control_MonthCalendar.gif"/>
+		    <asp:ImageButton ID="imgEndDate" runat="server" AlternateText="Click to select end date" ImageUrl="~/images/Control_MonthCalendar.gif"/>
 		    <TLR:CalendarExtender  CssClass="" TargetControlID="txtEndDate" ID="calEndDate" PopupButtonID="imgEndDate" runat="server"/> (m/d/yyyy)
 		 </span>
     </li>
     <li id="liType" runat="server" visible="false">
         <label for="<%=cblStatuses.ClientID%>">Type:</label>
         <span class="statuses">
-            <asp:CheckBoxList ID="cblTypes" runat="server" DataTextField="TypeName" DataValueField="TimesheetTypeID" RepeatLayout="table" RepeatColumns="1" />
+            <asp:CheckBoxList ID="cblTypes" runat="server" DataTextField="TypeName" DataValueField="TimesheetTypeID" RepeatLayout="table" RepeatColumns="1" role="presentation" />
         </span>
     </li>     
     <li>
         <label for="<%=cblStatuses.ClientID%>">Status:</label>
         <span class="statuses">
-            <asp:CheckBoxList ID="cblStatuses" runat="server" DataTextField="StatusName" DataValueField="TimesheetStatusID" RepeatLayout="table" RepeatColumns="1" />
+            <asp:CheckBoxList ID="cblStatuses" runat="server" DataTextField="StatusName" DataValueField="TimesheetStatusID" RepeatLayout="table" RepeatColumns="1" role="presentation" />
         </span>
     </li>    
     <li style="clear: both;">
@@ -108,17 +108,19 @@
    <asp:Repeater ID="rptTimesheetSearchResults" runat="server" EnableViewState="true">
    <HeaderTemplate>
    <table class="timesheetlist">
-    <tr>
-        <th>Pay Period</th>
-        <th>Name</th>
-        <th>Title</th>
-        <th>Department</th>
-        <th>Status</th>
-        <th>Type</th>
+       <thead>
+            <tr>
+                <th>Pay Period</th>
+                <th>Name</th>
+                <th>Title</th>
+                <th>Department</th>
+                <th>Status</th>
+                <th>Type</th>
         
        
-       <%#IIf(TLR.clsSession.userIsPayrollAdmin = True, "<th>Auto Processed</th>", "")%>
-    </tr>
+               <%#IIf(TLR.clsSession.userIsPayrollAdmin = True, "<th>Auto Processed</th>", "")%>
+            </tr>
+        </thead>
    </HeaderTemplate>
    <ItemTemplate>
     <tr>
@@ -145,11 +147,13 @@
 <HeaderTemplate>
 <h2>Please choose a person from the list</h2>
 <table class="tbl">
-<tr>
-    <th>Name</th>
-    <th>SID</th>
-    <th>Department</th>
-</tr>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>SID</th>
+            <th>Department</th>
+        </tr>
+    </thead>
 </HeaderTemplate>
 <ItemTemplate>
 <tr>

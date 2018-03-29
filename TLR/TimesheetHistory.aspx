@@ -15,7 +15,7 @@
         <label for="<%=txtStartDate.ClientID%>">Start Date:</label>
         <span>
 			<asp:TextBox ID="txtStartDate" CssClass="Form_Field" Width="80" autocomplete="off" MaxLength="10" runat="Server" />
-			<asp:ImageButton ID="imgCalStartDate" runat="server" AlternateText="Click to select date" ImageUrl="~/images/Control_MonthCalendar.gif"/>
+			<asp:ImageButton ID="imgCalStartDate" runat="server" AlternateText="Click to select start date" ImageUrl="~/images/Control_MonthCalendar.gif"/>
 			<TLR:CalendarExtender 
 			TargetControlID="txtStartDate"
 			ID="calStartDate" 
@@ -25,10 +25,10 @@
         </span>
     </li>
     <li>
-        <label for="<%=txtStartDate.ClientID%>">End Date:</label>
+        <label for="<%=txtEndDate.ClientID%>">End Date:</label>
         <span>
 		    <asp:TextBox ID="txtEndDate" CssClass="Form_Field" Width="80" AutoComplete="off" MaxLength="10" runat="SERVER" />
-		    <asp:ImageButton ID="imgEndDate" runat="server" AlternateText="Click to select date" ImageUrl="~/images/Control_MonthCalendar.gif"/>
+		    <asp:ImageButton ID="imgEndDate" runat="server" AlternateText="Click to select end date" ImageUrl="~/images/Control_MonthCalendar.gif"/>
 		    <TLR:CalendarExtender  CssClass=""
 		    TargetControlID="txtEndDate"
 		    ID="calEndDate" 
@@ -48,14 +48,16 @@
    <asp:Repeater ID="rptTimesheets" Visible="false" runat="server">
    <HeaderTemplate>
    <table class="timesheetlist">
-    <tr>
-        <th class="pay_period">Pay Period</th>
-        <th>Title</th>
-        <th>Department</th>
-        <th>Supervisor</th>
-        <th>Pay Rate</th>
-        <th>Status</th>
-    </tr>
+       <thead>
+            <tr>
+                <th class="pay_period">Pay Period</th>
+                <th>Title</th>
+                <th>Department</th>
+                <th>Supervisor</th>
+                <th>Pay Rate</th>
+                <th>Status</th>
+            </tr>
+       </thead>
    </HeaderTemplate>
    <ItemTemplate>
     <tr>
@@ -72,7 +74,7 @@
    </FooterTemplate>
    </asp:Repeater>  
 </div>
-<a style="color:#FFFFFF;">Note - this page was served from '<%response.write(System.Environment.MachineName)%>'</a>
+<%--<div style="color:#FFFFFF;">Note - this page was served from '<%response.write(System.Environment.MachineName)%>'</div>--%>
 </asp:Content>
 
 

@@ -31,6 +31,7 @@
     <li>
         <label for="fsWorkStartTime">I start work at:</label>
         <fieldset id="fsWorkStartTime">
+            <legend>I start work at</legend>
         <span>
             <label for="<%=ddlStartHour.ClientID%>" class="invisible_label">Start hour:</label>
             <asp:DropDownList CssClass="field" ID="ddlStartHour" runat="server" />
@@ -47,6 +48,7 @@
     <li>
         <label for="fsWorkEndTime">And end work at:</label>
         <fieldset id="fsWorkEndTime">
+            <legend>And end work at</legend>
         <span>
             <label for="<%=ddlEndHour.ClientID%>" class="invisible_label">End hour:</label>
             <asp:DropDownList CssClass="field" ID="ddlEndHour" runat="server" />
@@ -79,14 +81,16 @@
 <asp:Repeater ID="rptWorkSchedule" runat="server">
 <HeaderTemplate>
 <table class="tbl">
-<tr>
-<th>Day</th>
-<th>Start</th>
-<th>End</th>   
-<th>Meal</th>
-<th>Total</th>
-<th>Action</th>
-</tr>
+    <thead>
+        <tr>
+            <th>Day</th>
+            <th>Start</th>
+            <th>End</th>   
+            <th>Meal</th>
+            <th>Total</th>
+            <th>Action</th>
+        </tr>
+    </thead>
 </HeaderTemplate>
 <FooterTemplate>
 </table>
@@ -98,7 +102,9 @@
 <td><%#Format(Container.DataItem("EndTime"), "t")%></td>
 <td><%#Container.DataItem("MealTime")%> <abbr title="Minutes">min.</abbr></td>
 <td><%#Math.Floor(Container.DataItem("TotalMinutes") / 60).ToString + "<abbr title='Hours'> hrs.</abbr> " + IIf(Container.DataItem("TotalMinutes") Mod 60 = 0, "", CInt(Container.DataItem("TotalMinutes") Mod 60).ToString + " <abbr title='Minutes'>mins.</abbr>")%></td>
-<td><asp:Button ID="btnEdit" Text="Edit" CssClass="link_button" runat="server" CommandArgument='<%#Container.DataItem("WorkScheduleEntryID")%>' OnClick="EditEntry" /> <span onclick="javascript:return confirm('Are you sufre you want to delete this entry?')"><asp:Button ID="btnDelete" Text="Delete" CssClass="link_button" runat="server" CommandArgument='<%#Container.DataItem("WorkScheduleEntryID")%>' OnClick="DeleteEntry" /></span></td>
+<td><asp:Button ID="btnEdit" Text="Edit" CssClass="link_button" runat="server" CommandArgument='<%#Container.DataItem("WorkScheduleEntryID")%>' OnClick="EditEntry" />
+    <asp:Button ID="btnDelete" Text="Delete" CssClass="link_button" OnClientClick="return confirm('Are you sufre you want to delete this entry?');" runat="server" CommandArgument='<%#Container.DataItem("WorkScheduleEntryID")%>' OnClick="DeleteEntry" />
+</td>
 </tr>
 
 </ItemTemplate>
